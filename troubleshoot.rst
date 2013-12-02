@@ -1,4 +1,11 @@
 Resolución de problemas
 =======================
 
-.. todo:: Relacionar la lista de problemas más frecuentes y su solución
+Instalación de paquetes
+-----------------------
+
+Comprobaciones
+--------------
+
+Reporte de problemas
+--------------------
