@@ -1,13 +1,16 @@
-.. Guía de administración de LliureX Servidor documentation master file, created by
-   sphinx-quickstart on Thu Nov 28 18:02:38 2013.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Guía de usuario de LliureX Servidor
+===================================
 
-Guía de Administración de LliureX Servidor
-==========================================
+.. warning:: Versión en desarrollo. Última actualización (ver pie de página).
 
 Contenidos:
 
 .. toctree::
    :maxdepth: 2
 
+   intro.rst
+   configure.rst
+   manage.rst
+   troubleshoot.rst
+   advanced.rst
+   credits.rst
