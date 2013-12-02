@@ -27,15 +27,13 @@ Gestión de clientes LliureX
 ---------------------------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3 
 
-   manage/netinstall
-   manage/client_mgmt
-   manage/ltsp/intro
-   manage/ltsp/configure
-   manage/ltsp/manage
-   manage/ltsp/troubleshoot
-   manage/ltso/advanced
+   manage/intro
+   manage/configure
+   manage/manage
+   manage/troubleshoot
+   manage/advanced
 
 Actualización de LliureX
 ------------------------
