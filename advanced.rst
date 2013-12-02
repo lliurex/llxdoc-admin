@@ -18,4 +18,7 @@ Programación de tareas
 Filtrado de contenidos
 ----------------------
 
+Comandos útiles
+---------------
 
+(p.e. algunos de n4d)
