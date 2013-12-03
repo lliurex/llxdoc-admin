@@ -16,7 +16,7 @@ Compartir la pantalla
 
 Si no dispone de proyector en el aula o simplemente quiere mostrar cómo se realiza alguna tarea en varios equipos a la vez, puede emplear esta opción.
 
-.. image:: _static/epoptes-show.png
+.. image:: ../_static/epoptes-show.png
    :align: center
 
 Ejecutar aplicaciones
@@ -24,7 +24,7 @@ Ejecutar aplicaciones
 
 Si necesita lanzar una aplicación en los equipos seleccionados puede hacerlo mediante la opción resaltada en la imagen.
 
-.. image:: _static/epoptes-run.png
+.. image:: ../_static/epoptes-run.png
    :align: center
 
 Envío de mensajes
@@ -32,7 +32,7 @@ Envío de mensajes
 
 Igualmente, desde el mismo menú anterior o bien desde la barra de herramientas, puede enviar mensajes a los equipos seleccionados.
 
-.. image:: _static/epoptes-msg.png
+.. image:: ../_static/epoptes-msg.png
    :align: center
 
 Bloquear y desbloquear pantallas
@@ -40,7 +40,7 @@ Bloquear y desbloquear pantallas
 
 De la misma manera puede bloquear (y desbloquear) equipos.
 
-.. image:: _static/epoptes-block.png
+.. image:: ../_static/epoptes-block.png
    :align: center
 
 Iniciar, reiniciar o apagar
@@ -48,7 +48,7 @@ Iniciar, reiniciar o apagar
 
 Como utilidad adicional, puede iniciar (encender), reiniciar o apagar los equipos seleccionados.
 
-.. image:: _static/epoptes-session.png
+.. image:: ../_static/epoptes-session.png
    :align: center
 
 Es posible que lleguemos con el tiempo justo al aula, y no queramos perder el tiempo esperando que los alumnos arranquen los equipos, el Epoptes, nos va a permitir arrancar todos los equipos del aula a la vez, pero para ello nuestra aula debe cumplir unos requisitos:
@@ -61,7 +61,7 @@ Una vez se cumplan estos requisitos, vamos a poder arrancar todos los equipos de
 
 Tanto para evitar que se quede encendido algún equipo (una vez finalizadas las clases) como para reiniciar algún equipo concreto, podemos mirar con Epoptes los clientes que se detectan:
 
-.. image:: _static/epoptes-detect.png
+.. image:: ../_static/epoptes-detect.png
    :align: center
 
 De esta manera podemos proceder a apagarlos o reiniciarlos mediante la correspondiente opción del menú.
@@ -75,7 +75,7 @@ El proceso a seguir es el siguiente:
 
 #. En el equipo cliente debe lanzar la aplicación *LliureX LTSP Info* y le aparecerá la siguiente ventana:
 
-.. image:: _static/llx-ltsp-register.png
+.. image:: ../_static/llx-ltsp-register.png
    :height: 600px
    :align: center
 
@@ -83,7 +83,7 @@ El proceso a seguir es el siguiente:
 
 #. Por último, en el Gestor de LliureX LTSP, pulsamos el botón de *Cliente nuevo* e importamos la información enviada, tal y como se muestra en la imagen:
 
-.. image:: _static/llx-ltsp-classroom-mgmt-new-client.png
+.. image:: ../_static/llx-ltsp-classroom-mgmt-new-client.png
    :width: 500px
    :align: center
 
@@ -99,7 +99,7 @@ Para poder realizar acciones a todo un grupo de ordenadores (como por ejemplo el
 
 Cuando, por ejemplo, deseemos apagar los equipos podremos realizar esta opción desde el menú (a todo el grupo) y aparecerán con el siguiente icono:
 
-.. image:: _static/epoptes-client-offline.png
+.. image:: ../_static/epoptes-client-offline.png
    :align: center
 
 Wake On LAN
@@ -115,13 +115,13 @@ Para ver si la BIOS esta correctamente configurada, haga lo siguiente:
 .. important:: Recuerde guardar los cambios en la BIOS antes de salir.
 
 
-.. figure:: _static/wakeonlan1.png
+.. figure:: ../_static/wakeonlan1.png
    :align: left
 
    Ejemplo 1
 
 
-.. figure:: _static/wakeonlan2.jpg
+.. figure:: ../_static/wakeonlan2.jpg
    :align: right
 
    Ejemplo 2

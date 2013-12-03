@@ -8,12 +8,12 @@ LliureX LTSP es la adaptación del proyecto LTSP (`Linux Terminal Server Project
 
 LTSP es un servidor de terminales libre y abierto para Linux que permite que varias personas utilicen el mismo ordenador. Las aplicaciones se ejecutan en el servidor con un terminal llamado cliente ligero. Generalmente los clientes ligeros tienen un consumo reducido de energía, no disponen de disco duro y son más silenciosos y fiables que los ordenadores normales (al no tener partes móviles).
 
-.. image:: _static/thin-client.jpg
+.. image:: ../_static/thin-client.jpg
    :height: 200px
    
 De la misma manera, ordenadores que podrían llegar a ser obsoletos se pueden reciclar en clientes ligeros. Extendiendo la vida útil de estos ordenadores también se reducen costes.
 
-.. image:: _static/pc.jpg
+.. image:: ../_static/pc.jpg
    :height: 200px
 
 Por último, el hecho de que todos los clientes ligeros arranquen la misma imagen reduce drásticamente el mantenimiento de la configuración. Por ejemplo, en lugar de actualizar todos los equipos, sólo actualizamos una imagen que se cargará en todos.

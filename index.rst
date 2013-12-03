@@ -44,7 +44,7 @@ Actualización de LliureX
    update/intro
    update/configure
    update/manage
-   uodate/troubleshoot
+   update/troubleshoot
    update/advanced
    
 Resolución de problemas en LliureX Servidor

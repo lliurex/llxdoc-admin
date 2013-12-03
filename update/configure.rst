@@ -18,7 +18,7 @@ Puede configurar cualquiera de estos dos repositorios **si comprueba que van má
 
 Para ello será necesario introducir el repositorio escogido en el campo marcado de la imagen y pulsar sobre el botón de actualización indicado:
 
-.. figure:: _static/lliurex-mirror-other-repo.png
+.. figure:: ../_static/lliurex-mirror-other-repo.png
    :height: 400px
    
    *Especifique otro repositorio para LliureX Mirror*
@@ -39,7 +39,7 @@ Otra de las funcionalidades que incorpora LliureX Mirror, para mayor comodidad, 
 
 Puede ver en la imagen las opciones que permiten realizar estas operaciones.
 
-.. figure:: _static/lliurex-mirror-import-export.png
+.. figure:: ../_static/lliurex-mirror-import-export.png
    :height: 400px
 
    *Puede importar réplicas de repositorios y exportar el repositorio local para otro equipo*

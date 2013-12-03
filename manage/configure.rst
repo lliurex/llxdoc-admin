@@ -33,12 +33,12 @@ Puede acceder a LliureX LTSP desde el menú de *Administración de LliureX*, sel
 
 La pantalla de entrada es la siguiente:
 
-.. image:: _static/llx-ltsp-login.png
+.. image:: ../_static/llx-ltsp-login.png
    :width: 500px
 
 Deberá introducir un usuario y contraseña con permisos de administración. Una vez validado se le presentará la siguiente ventana:
 
-.. image:: _static/llx-ltsp-welcome.png
+.. image:: ../_static/llx-ltsp-welcome.png
    :width: 500px
 
 Desde ella podrá realizar las siguientes operaciones:
@@ -60,7 +60,7 @@ En la sección de *Gestión del aula* se pueden configurar los siguientes parám
   * Arranque por defecto.
   * Tiempo de expiración. 
 
-.. image:: _static/llx-ltsp-classroom-mgmt.png
+.. image:: ../_static/llx-ltsp-classroom-mgmt.png
    :width: 500px
 
 * Otra sección para configurar clientes concretos, que permite configurar casos especiales (cuando tenemos un aula mixta con clientes ligeros y equipos normales, por ejemplo):
@@ -70,7 +70,7 @@ En la sección de *Gestión del aula* se pueden configurar los siguientes parám
   * Sesión (Gnome Classic o Entorno Alternativo con XFCE)
   * Autologin (con un usuario y contraseña suministrados)
 
-.. image:: _static/llx-ltsp-classroom-mgmt-client.png
+.. image:: ../_static/llx-ltsp-classroom-mgmt-client.png
    :width: 500px
 
 * Para ir añadiendo clientes personalizados en la sección anterior hay que pulsar el botón de *Cliente nuevo*. 
@@ -82,7 +82,7 @@ Gestión de las imágenes
 
 LliureX LTSP permite la instalación, personalización, borrado, exportación e importación de imágenes de clientes ligeros.
 
-.. image:: _static/llx-ltsp-images-mgmt.png
+.. image:: ../_static/llx-ltsp-images-mgmt.png
    :width: 500px
 
 Veamos cada una de estas posibilidades con algo más de detalle.
@@ -120,7 +120,7 @@ Para poder adaptar las imágenes a las necesidades concretas de cada aula se ofr
 * Gestionar los usuarios
 * Instalar una versión ligera del escritorio
 
-.. image:: _static/llx-ltsp-images-mgmt-customize.png
+.. image:: ../_static/llx-ltsp-images-mgmt-customize.png
    :width: 500px
 
 Una vez hayamos acabado de realizar cambios, deberemos aplicar los cambios para que se regenere la *imagen*.
@@ -136,7 +136,7 @@ Instalación (por red) del aula
 
 Esta opción es la que deberá escoger cuando necesite instalar (como clientes normales) parte o toda el aula. Como puede comprobar en la captura de pantalla, se trata de *habilitar* la instalación por red y aplicar los cambios. A partir de ese momento podrá instalar desde el arranque por red (PXE) de los equipos cliente.
 
-.. image:: _static/llx-ltsp-netinstall-enable.png
+.. image:: ../_static/llx-ltsp-netinstall-enable.png
    :width: 500px
 
 .. note::
@@ -144,12 +144,12 @@ Esta opción es la que deberá escoger cuando necesite instalar (como clientes n
 
 En el equipo cliente se podrá observar el siguiente menú en el arranque:
 
-.. image:: _static/llx-ltsp-netinstall-PXE.png
+.. image:: ../_static/llx-ltsp-netinstall-PXE.png
    :width: 500px
 
 Escoja la opción de instalar y aparecerá un nuevo menú con las posibles imágenes a instalar:
 
-.. image:: _static/llx-ltsp-netinstall-PXE2.png
+.. image:: ../_static/llx-ltsp-netinstall-PXE2.png
    :width: 500px
 
 Mantenimiento del repositorio
@@ -157,7 +157,7 @@ Mantenimiento del repositorio
 
 Desde esta sección puede actualizar el repositorio de paquetes de LliureX en el servidor del Aula. Insistimos en que la correcta actualización del repositorio es **fundamental** para el funcionamiento de LliureX LTSP.
 
-.. image:: _static/llx-ltsp-mirror-update.png
+.. image:: ../_static/llx-ltsp-mirror-update.png
    :width: 500px
 
 .. hint::
