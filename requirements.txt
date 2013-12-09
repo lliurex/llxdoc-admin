@@ -1,1 +1,2 @@
+nwdiag
 sphinxcontrib-nwdiag
