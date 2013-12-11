@@ -153,5 +153,5 @@ doctest:
 	      "results in $(BUILDDIR)/doctest/output.txt."
 
 github: html
-	ghp-import -m "Syncing html build" $(BUILDDIR)/html
+	ghp-import -n -m "Syncing html build" $(BUILDDIR)/html
 	git push --all
