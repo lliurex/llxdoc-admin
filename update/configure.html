@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Configuración de LliureX Mirror &mdash; Guía de Administración de LliureX Servidor v 0.1</title>
+    
+    <link rel="stylesheet" href="../_static/solar.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="Guía de Administración de LliureX Servidor v 0.1" href="../index.html" />
+    <link rel="next" title="Actualización de equipos" href="manage.html" />
+    <link rel="prev" title="Gestión de actualizaciones en LliureX" href="intro.html" /><link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Open+Sans:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+<link href="../_static/solarized-dark.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="manage.html" title="Actualización de equipos"
+             accesskey="N">siguiente</a></li>
+        <li class="right" >
+          <a href="intro.html" title="Gestión de actualizaciones en LliureX"
+             accesskey="P">anterior</a> |</li>
+        <li><a href="../index.html">Guía de Administración de LliureX Servidor</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/lliurex.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../index.html">Contenidos</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Configuración de LliureX Mirror</a><ul>
+<li><a class="reference internal" href="#configuracion-del-repositorio-de-lliurex-mirror">Configuración del repositorio de LliureX Mirror</a><ul>
+<li><a class="reference internal" href="#replicas-del-repositorio-central-de-lliurex">Réplicas del repositorio central de LliureX</a></li>
+<li><a class="reference internal" href="#replicas-internas">Réplicas internas</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#importacion-y-exportacion-de-repositorios">Importación y exportación de repositorios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Tema anterior</h4>
+  <p class="topless"><a href="intro.html"
+                        title="Capítulo anterior">Gestión de actualizaciones en LliureX</a></p>
+  <h4>Próximo tema</h4>
+  <p class="topless"><a href="manage.html"
+                        title="Próximo capítulo">Actualización de equipos</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Búsqueda rápida</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Ir a" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="configuracion-de-lliurex-mirror">
+<h1>Configuración de LliureX Mirror<a class="headerlink" href="#configuracion-de-lliurex-mirror" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="configuracion-del-repositorio-de-lliurex-mirror">
+<h2>Configuración del repositorio de LliureX Mirror<a class="headerlink" href="#configuracion-del-repositorio-de-lliurex-mirror" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>La configuración por defecto tiene como repositorio central el de LliureX en la Conselleria d&#8217;Educació, Esport i Cultura (accesible por la Red Corporativa de aulas).</p>
+<div class="section" id="replicas-del-repositorio-central-de-lliurex">
+<h3>Réplicas del repositorio central de LliureX<a class="headerlink" href="#replicas-del-repositorio-central-de-lliurex" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Hay dos réplicas adicionales disponibles en:</p>
+<ul class="simple">
+<li>Universidad Politécnica de Valencia: <a class="reference external" href="http://lliurex.upv.es/pandora/">http://lliurex.upv.es/pandora/</a></li>
+<li>RedIRIS (Red Académica Española): <a class="reference external" href="http://ftp.rediris.es/mirror/Lliurex/pool/pandora/">http://ftp.rediris.es/mirror/Lliurex/pool/pandora/</a></li>
+</ul>
+<p>Puede configurar cualquiera de estos dos repositorios <strong>si comprueba que van más rápidos desde su localización</strong>. Tenga en cuenta que estas réplicas se refrescan con una periodicidad menor a la del respositorio central de LliureX.</p>
+<p>Para ello será necesario introducir el repositorio escogido en el campo marcado de la imagen y pulsar sobre el botón de actualización indicado:</p>
+<div class="figure">
+<img alt="../_images/lliurex-mirror-other-repo.png" src="../_images/lliurex-mirror-other-repo.png" style="height: 400px;" />
+<p class="caption"><em>Especifique otro repositorio para LliureX Mirror</em></p>
+</div>
+</div>
+<div class="section" id="replicas-internas">
+<span id="id1"></span><h3>Réplicas internas<a class="headerlink" href="#replicas-internas" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>En caso de tener configurado el Modelo de Centro de LliureX (en el que hay un servidor de centro y otro por cada aula) puede configurar este campo <strong>para que los servidores de aula se actualicen a partir del mirror del servidor de centro</strong>. Para ello deberá introducir <a class="reference external" href="http://10.3.0.254/mirror/">http://10.3.0.254/mirror/</a> en la configuración de LliureX Mirror de cada servidor de aula. De esta manera sólo el servidor de centro se sincronizará con el repositorio central de LliureX.</p>
+<p>Si decide configurarlo de esta manera, es recomendable programar las actualizaciones para que se hagan de manera automática (por ejemplo con la Herramienta de Planificador de Tareas). Puede escoger realizarlas por la noche (bien todas las noches, o varias noches a la semana). Debe evitar actualizar los servidores de aula a una hora en la que pueda estar actualizándose el servidor de centro dado que podrián surgir inconsistencias en los repositorios. Por ello <em>no se deben solapar los tiempos de actualización entre servidores</em>. De todas maneras recuerde que (de tener esta configuración) <strong>la actualización de los servidores de aula se hará a la velocidad de la red local</strong> del centro (100 Mbps o 1 Gbps, dependiendo de la infraestructura instalada).</p>
+</div>
+</div>
+<div class="section" id="importacion-y-exportacion-de-repositorios">
+<h2>Importación y exportación de repositorios<a class="headerlink" href="#importacion-y-exportacion-de-repositorios" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Otra de las funcionalidades que incorpora LliureX Mirror, para mayor comodidad, es la posibilidad de importar y exportar repositorios. Esta característica es <strong>muy interesante para reducir drásticamente el tiempo de la copia inicial de un repositorio</strong>. Si, por ejemplo, tenemos dos servidores aislados y en el primero disponemos de una copia actualizada del <em>mirror</em>, podemos exportar (copiar en un medio de almacenamiento externo) dicha réplica para poder importarla en el segundo servidor. Téngase en cuenta que no es necesario que ambos sean servidores para realizar esta operación, es decir, podemos instalar LliureX Mirror y obtener una réplica del repositorio en un LliureX Escriptori con buena conectividad. A continuación, exportarlo a un <em>pendrive</em> y, por último, importarlo en un LliureX Infantil o un servidor de LliureX que no tiene conectividad con el resto del centro.</p>
+<p>Puede ver en la imagen las opciones que permiten realizar estas operaciones.</p>
+<div class="figure">
+<img alt="../_images/lliurex-mirror-import-export.png" src="../_images/lliurex-mirror-import-export.png" style="height: 400px;" />
+<p class="caption"><em>Puede importar réplicas de repositorios y exportar el repositorio local para otro equipo</em></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="manage.html" title="Actualización de equipos"
+             >siguiente</a></li>
+        <li class="right" >
+          <a href="intro.html" title="Gestión de actualizaciones en LliureX"
+             >anterior</a> |</li>
+        <li><a href="../index.html">Guía de Administración de LliureX Servidor</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES">Licencia CC BY-NC-SA 3.0</a> 2013, Equipo LliureX.
+      Actualizado por última vez en 2013-12-09.
+    Creado con <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3. Tema por <a href="http://github.com/vkvn">vkvn</a>
+    </div>
+  </body>
+</html>

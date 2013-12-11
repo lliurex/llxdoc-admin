@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Actualización de equipos &mdash; Guía de Administración de LliureX Servidor v 0.1</title>
+    
+    <link rel="stylesheet" href="../_static/solar.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="Guía de Administración de LliureX Servidor v 0.1" href="../index.html" />
+    <link rel="next" title="Resolución de problemas" href="troubleshoot.html" />
+    <link rel="prev" title="Configuración de LliureX Mirror" href="configure.html" /><link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Open+Sans:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+<link href="../_static/solarized-dark.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="troubleshoot.html" title="Resolución de problemas"
+             accesskey="N">siguiente</a></li>
+        <li class="right" >
+          <a href="configure.html" title="Configuración de LliureX Mirror"
+             accesskey="P">anterior</a> |</li>
+        <li><a href="../index.html">Guía de Administración de LliureX Servidor</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/lliurex.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../index.html">Contenidos</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Actualización de equipos</a><ul>
+<li><a class="reference internal" href="#equipo-independiente-con-conectividad">Equipo independiente con conectividad</a></li>
+<li><a class="reference internal" href="#equipo-aislado-o-con-baja-conectividad">Equipo aislado o con baja conectividad</a></li>
+<li><a class="reference internal" href="#servidor-lliurex">Servidor LliureX</a></li>
+<li><a class="reference internal" href="#equipo-cliente">Equipo cliente</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Tema anterior</h4>
+  <p class="topless"><a href="configure.html"
+                        title="Capítulo anterior">Configuración de LliureX Mirror</a></p>
+  <h4>Próximo tema</h4>
+  <p class="topless"><a href="troubleshoot.html"
+                        title="Próximo capítulo">Resolución de problemas</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Búsqueda rápida</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Ir a" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="actualizacion-de-equipos">
+<h1>Actualización de equipos<a class="headerlink" href="#actualizacion-de-equipos" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Una vez tenga actualizado el repositorio del que depende su equipo, podrá utilizar LliureX-Up para mantenerlo al día. Un equipo independiente depende por defecto del repositorio central de LliureX. Un equipo dependiente de un servidor (bien sea de aula o de centro) tiene configurado como repositorio por defecto la réplica de dicho servidor. Por tanto, deberemos velar por la previa actualización de dicha réplica si queremos incorporar las últimas correcciones y novedades en el equipo cliente.</p>
+<p>Es recomendable incorporar las correcciones y novedades de LliureX con una frecuencia mínima de una vez a la semana. De esta manera evitará la acumulación excesiva de actualizaciones, haciendo que el proceso sea más corto. Para ello puede utilizar el <em>Planificador de tareas de LliureX</em> y así programar una vez a la semana el mantenimiento, por ejemplo. Puede acceder al <em>Planificador</em> desde el menú de <em>Administración LliureX</em>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Advertencia</p>
+<p class="last">El hecho de tener una réplica del repositorio actualizada no significa que el equipo esté actualizado. Para aplicar las novedades recibidas en dicha sincronización es necesario lanzar LliureX-Up.</p>
+</div>
+<div class="section" id="equipo-independiente-con-conectividad">
+<h2>Equipo independiente con conectividad<a class="headerlink" href="#equipo-independiente-con-conectividad" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>En el caso de un equipo independiente (como pueda ser un portátil o el propio ordenador de casa), <em>no es necesario instalar LliureX Mirror para su actualización</em>. Únicamente deberá lanzar el <em>Actualizador de LliureX</em> o <em>LliureX Up</em> por las tres vías posibles comentadas en la <a class="reference internal" href="intro.html#lliurex-up-intro"><em>introducción</em></a>. Sólo en el caso de que vaya a utilizar dicho equipo para mantener una copia del repositorio de LliureX (y así poder sincronizar otro aislado o con baja conectividad) será necesaria la instalación de LliureX Mirror.</p>
+</div>
+<div class="section" id="equipo-aislado-o-con-baja-conectividad">
+<h2>Equipo aislado o con baja conectividad<a class="headerlink" href="#equipo-aislado-o-con-baja-conectividad" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Para poder mantener un equipo aislado (o con baja conectividad) actualizado necesitará otro que sí disponga de conectividad (de banda ancha) y que tenga instalado LliureX Mirror (no es necesario que sea un servidor). Los pasos a seguir son:</p>
+<ol class="arabic simple">
+<li>Actualice el repositorio en el equipo con conectividad.</li>
+<li>Exporte el repositorio actualizado a un dispositivo de almacenamiento externo.</li>
+<li>Importe el repositorio en el equipo aislado.</li>
+<li>Proceda con la actualización con LliureX Up.</li>
+</ol>
+<div class="admonition warning">
+<p class="first admonition-title">Advertencia</p>
+<p class="last">Para poder realizar la importación será necesario que el equipo aislado tenga previamente instalado LliureX Mirror. Así pues es conveniente instalarlo en un lugar con conectividad o instalar a mano los paquetes necesarios.</p>
+</div>
+</div>
+<div class="section" id="servidor-lliurex">
+<h2>Servidor LliureX<a class="headerlink" href="#servidor-lliurex" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Actualizar un servidor conlleva previamente mantener una réplica del repositorio de LliureX. Esta es una tarea crítica por los siguientes motivos:</p>
+<ul class="simple">
+<li>Es imprescindible para la generación de las imágenes de los clientes ligeros (caso de que vaya a utilizarlos).</li>
+<li>Es necesario para la actualización a velocidad óptima de los equipos cliente normales.</li>
+</ul>
+<p>Por lo tanto, el procedimiento de cada servidor debe ser:</p>
+<ol class="arabic simple">
+<li>Actualizar la réplica.</li>
+<li>Aplicar las actualizaciones en el servidor (localmente).</li>
+<li>Aplicar las actualizaciones a todos los clientes (normales) y a las imágenes de los clientes ligeros/semi-ligeros (en su caso).</li>
+</ol>
+<p>Si hay más de un servidor en el centro, se puede escoger uno de ellos para usarlo de copia maestra y que el resto (esclavos) se sincronicen con él. De esta manera sólo actualizaríamos una vez desde el repositorio central de LliureX y el resto de servidores lo harían dentro de la red local a mucha mayor velocidad. En este caso, los esclavos deberían configurar como origen la IP externa del que actúe como maestro. Tiene un ejemplo de esta configuración en la sección de <a class="reference internal" href="configure.html#replicas-internas"><em>Réplicas internas</em></a>.</p>
+</div>
+<div class="section" id="equipo-cliente">
+<h2>Equipo cliente<a class="headerlink" href="#equipo-cliente" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Puede actualizar un conjunto de equipos simultáneamente mediante la herramienta de <em>Gestión remota de clientes</em> en el <em>Centro de Control de LliureX</em>. Esta herramienta establece (desde un servidor) una conexión con todos los equipos cliente que dependen de él. Aparecerá una línea de comandos desde la que podrá ejecutar una orden simultánea: <em>sudo lliurex-upgrade</em>. De esta manera, todos los clientes accedidos empezarán el proceso de actualización usando el repositorio (que debe estar recién sincronizado) del servidor local al que están conectados (si llevan la configuración por defecto).</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="troubleshoot.html" title="Resolución de problemas"
+             >siguiente</a></li>
+        <li class="right" >
+          <a href="configure.html" title="Configuración de LliureX Mirror"
+             >anterior</a> |</li>
+        <li><a href="../index.html">Guía de Administración de LliureX Servidor</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES">Licencia CC BY-NC-SA 3.0</a> 2013, Equipo LliureX.
+      Actualizado por última vez en 2013-12-09.
+    Creado con <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3. Tema por <a href="http://github.com/vkvn">vkvn</a>
+    </div>
+  </body>
+</html>

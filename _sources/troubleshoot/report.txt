@@ -1,0 +1,2 @@
+Informe de errores
+==================

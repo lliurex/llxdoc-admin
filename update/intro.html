@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Gestión de actualizaciones en LliureX &mdash; Guía de Administración de LliureX Servidor v 0.1</title>
+    
+    <link rel="stylesheet" href="../_static/solar.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="Guía de Administración de LliureX Servidor v 0.1" href="../index.html" />
+    <link rel="next" title="Configuración de LliureX Mirror" href="configure.html" />
+    <link rel="prev" title="Temas avanzados" href="../manage/advanced.html" /><link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Open+Sans:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+<link href="../_static/solarized-dark.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="configure.html" title="Configuración de LliureX Mirror"
+             accesskey="N">siguiente</a></li>
+        <li class="right" >
+          <a href="../manage/advanced.html" title="Temas avanzados"
+             accesskey="P">anterior</a> |</li>
+        <li><a href="../index.html">Guía de Administración de LliureX Servidor</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/lliurex.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../index.html">Contenidos</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Gestión de actualizaciones en LliureX</a><ul>
+<li><a class="reference internal" href="#que-es-lliurex-mirror">¿Qué es LliureX Mirror?</a><ul>
+<li><a class="reference internal" href="#racionalizar-el-acceso-a-internet">Racionalizar el acceso a Internet</a></li>
+<li><a class="reference internal" href="#novedades">Novedades</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#que-es-lliurex-up">¿Qué es LliureX Up?</a></li>
+<li><a class="reference internal" href="#conceptos-basicos">Conceptos básicos</a></li>
+<li><a class="reference internal" href="#requisitos-de-funcionamiento">Requisitos de funcionamiento</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Tema anterior</h4>
+  <p class="topless"><a href="../manage/advanced.html"
+                        title="Capítulo anterior">Temas avanzados</a></p>
+  <h4>Próximo tema</h4>
+  <p class="topless"><a href="configure.html"
+                        title="Próximo capítulo">Configuración de LliureX Mirror</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Búsqueda rápida</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Ir a" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="gestion-de-actualizaciones-en-lliurex">
+<h1>Gestión de actualizaciones en LliureX<a class="headerlink" href="#gestion-de-actualizaciones-en-lliurex" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>LliureX es una distribución que está en constante evolución y mejora. Para poder disfrutar de las novedades, y de la corrección de los fallos que van surgiendo, es importante mantener los equipos actualizados. Para mantener los equipos actualizados se emplean dos aplicaciones desarrolladas por LliureX: <em>LliureX Mirror</em> y <em>LliureX Up</em>.</p>
+<div class="section" id="que-es-lliurex-mirror">
+<h2>¿Qué es LliureX Mirror?<a class="headerlink" href="#que-es-lliurex-mirror" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>LliureX Mirror es una aplicación para crear y mantener una copia actualizada (<em>mirror</em>) del repositorio de paquetes de LliureX. La función principal de esta copia es la <strong>distribución óptima de la actualización de los equipos de un aula y de todo el centro</strong>. Además, a partir de LliureX Pandora 13.06, <strong>si emplea clientes ligeros</strong> en el centro, mantener una copia del repositorio de LliureX pasa a ser una <strong>parte fundamental y crítica, sin la cual no es posible funcionar</strong>.</p>
+<div class="section" id="racionalizar-el-acceso-a-internet">
+<h3>Racionalizar el acceso a Internet<a class="headerlink" href="#racionalizar-el-acceso-a-internet" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>En los centros docentes hay un parque informático numeroso (desde unas pocas decenas de equipos hasta algún que otro centenar, según el centro). En lugar de descargar las actualizaciones desde cada uno de los ordenadores (lo cual colapsaría la conexión a Internet del centro), <strong>es más eficiente descargarse los paquetes nuevos en un solo equipo (que actuará como copia o réplica local)</strong>.</p>
+<p>De esta manera, si configuramos adecuadamente los equipos del centro, podremos hacer una actualización a la velocidad de la red local (100 Mbps ó 1 Gbps, dependiendo de la infraestructura existente). Así pues, sólo se utilizaría el ancho de banda de la conexión a Internet para los nuevos paquetes <em>en un solo equipo</em>. Tenga en cuenta que, la primera vez que se copia el repositorio, tendrá que descargarlo en su totalidad (actualmente unos 9 GB). Por lo tanto, la duración del proceso inicial de copia será mucho más largo que las actualizaciones posteriores (si se hacen con frecuencia).</p>
+</div>
+<div class="section" id="novedades">
+<h3>Novedades<a class="headerlink" href="#novedades" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>A partir de LliureX Pandora 13.06 se dispone de <strong>dos arquitecturas: 32 y 64 bits</strong>. Se emplean 32 bits en el equipamiento más antiguo y en la mayoría de clientes ligeros. Por lo tanto, puede ser necesario mantener ambos repositorios con lo cual duplicamos el tamaño necesario para descargar y alojar en el equipo que hará de <em>mirror</em> local.</p>
+<p>Además, LliureX Mirror le permite guardar en un dispositivo de almacenamiento externo (p.e. disco USB o <em>pendrive</em>) una copia del repositorio. Gracias a esta utilidad es posible descargarse el <em>mirror</em> en un sitio con buena conectividad y copiarlo en otro con mala o nula conectividad. El ejemplo más claro es el de un aulario o equipo que está aislado o funciona con un enlace <em>wifi</em>. Con este <strong>mecanismo de importación y exportación de repositorios</strong> podemos mantener actualizados equipos en dicha situación.</p>
+</div>
+</div>
+<div class="section" id="que-es-lliurex-up">
+<span id="lliurex-up-intro"></span><h2>¿Qué es LliureX Up?<a class="headerlink" href="#que-es-lliurex-up" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>LliureX Up es un programa que aplica los cambios y novedades disponibles desde el repositorio configurado. Realiza la descarga de las <strong>versiones nuevas de los paquetes que ya están instalados en nuestro sistema</strong> y aplica la instalación ordenada de los mismos. Adicionalmente, LliureX Up realiza varias comprobaciones y corrige lo que sea necesario para el correcto funcionamiento de las actualizaciones.</p>
+<p>LliureX Up es accesible desde:</p>
+<ul class="simple">
+<li><em>Centro de Control de LliureX</em>, apartado <em>Sistema</em> (aparece como <em>Actualizador de LliureX</em>)</li>
+<li>Menú del sistema, opción <em>Actualizar software</em></li>
+<li>Desde la línea de comandos, ejecutando la orden <em>sudo lliurex-upgrade</em></li>
+</ul>
+</div>
+<div class="section" id="conceptos-basicos">
+<h2>Conceptos básicos<a class="headerlink" href="#conceptos-basicos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Para poder sacar el máximo partido a la herramienta de LliureX Mirror es necesario tener claro unos conceptos fundamentales. Los vemos a continuación:</p>
+<dl class="docutils">
+<dt><strong>Repositorio de paquetes</strong> (<em>pool</em>)</dt>
+<dd>Directorio con un conjunto indexado de paquetes dispuestos para su descarga y posterior instalación. Como ejemplo, puede <em>navegar</em> por el repositorio de LliureX Pandora en: <a class="reference external" href="http://lliurex.net/pandora/">http://lliurex.net/pandora/</a></dd>
+<dt><strong>Paquete</strong></dt>
+<dd>Archivo comprimido que contiene los ficheros y la información necesaria para instalar un programa o <em>parte</em> de un programa (p.e. una librería). Tienen la extensión <em>.deb</em> (Ubuntu está basado en <em>Debian</em> GNU/Linux, de ahí las letras de la extensión). Si ha navegado por el <em>pool</em> habrá encontrado estos archivos. Podemos ver por ejemplo los paquetes de LliureX Mirror en: <a class="reference external" href="http://lliurex.net/pandora/pool/main/l/lliurex-mirror/">http://lliurex.net/pandora/pool/main/l/lliurex-mirror/</a></dd>
+<dt><strong>Dependencia</strong></dt>
+<dd>Relación que se establece entre paquetes y que indica la necesidad de instalar previamente otros paquetes para el correcto funcionamiento de un paquete concreto. Para saber los paquetes de los que depende, por ejemplo, <em>stellarium</em> puede abrir el terminal y teclear: <em>apt-cache depends stellarium</em></dd>
+<dt><strong>Réplica</strong> (<em>mirror</em>)</dt>
+<dd>Copia exacta de un repositorio con la finalidad de agilizar el proceso de instalación de paquetes y evitar la descarga repetitiva de equipos iguales (caso de un aula de informática). A lo largo de este documento se emplea indistintamente tanto <em>Réplica de LliureX</em> como <em>LliureX Mirror</em>.</dd>
+</dl>
+</div>
+<div class="section" id="requisitos-de-funcionamiento">
+<h2>Requisitos de funcionamiento<a class="headerlink" href="#requisitos-de-funcionamiento" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>LliureX Mirror viene instalado en cualquier servidor LliureX (Aula, Centro o Independiente). Para poder utilizarlo en cualquier otro sabor de LliureX deberá de instalar el paquete <em>python-lliurex-mirror</em>.</p>
+<p>Disponga el espacio suficiente en el disco duro para almacenar la copia del repositorio o repositorios (en el caso de que vaya a copiar ambas arquitecturas, 32 y 64 bits). Igualmente es necesaria una conexión a Internet de Banda Ancha (sobre todo para la copia inicial).</p>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Tenga en cuenta que, dependiendo de la frecuencia de las actualizaciones, la cantidad de archivos a descargar será mayor o menor. Si tardamos uno o varios meses en actualizar la copia local, el tamaño de la descarga puede ser de varias decenas de MB (e incluso algun centenar de MB, dependiendo de lo que se actualice en esas fechas). Así pues, la recomendación es realizarlas al menos semanalmente.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="configure.html" title="Configuración de LliureX Mirror"
+             >siguiente</a></li>
+        <li class="right" >
+          <a href="../manage/advanced.html" title="Temas avanzados"
+             >anterior</a> |</li>
+        <li><a href="../index.html">Guía de Administración de LliureX Servidor</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES">Licencia CC BY-NC-SA 3.0</a> 2013, Equipo LliureX.
+      Actualizado por última vez en 2013-12-09.
+    Creado con <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3. Tema por <a href="http://github.com/vkvn">vkvn</a>
+    </div>
+  </body>
+</html>

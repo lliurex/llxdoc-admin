@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Principios &mdash; Guía de Administración de LliureX Servidor v 0.1</title>
+    
+    <link rel="stylesheet" href="../_static/solar.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="Guía de Administración de LliureX Servidor v 0.1" href="../index.html" />
+    <link rel="next" title="Conceptos básicos" href="concepts.html" />
+    <link rel="prev" title="Guía de administración de LliureX Servidor" href="../index.html" /><link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Open+Sans:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+<link href="../_static/solarized-dark.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="concepts.html" title="Conceptos básicos"
+             accesskey="N">siguiente</a></li>
+        <li class="right" >
+          <a href="../index.html" title="Guía de administración de LliureX Servidor"
+             accesskey="P">anterior</a> |</li>
+        <li><a href="../index.html">Guía de Administración de LliureX Servidor</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/lliurex.png" alt="Logo"/>
+            </a></p>
+  <h4>Tema anterior</h4>
+  <p class="topless"><a href="../index.html"
+                        title="Capítulo anterior">Guía de administración de LliureX Servidor</a></p>
+  <h4>Próximo tema</h4>
+  <p class="topless"><a href="concepts.html"
+                        title="Próximo capítulo">Conceptos básicos</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Búsqueda rápida</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Ir a" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="principios">
+<h1>Principios<a class="headerlink" href="#principios" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>La meta principal de LliureX es proporcionar la mejor herramienta informática posible para dar soporte a la comunidad educativa.</p>
+<p>Partiendo de este ambicioso cometido, y teniendo en cuenta las limitaciones lógicas, se plantean una serie de fines:</p>
+<dl class="docutils">
+<dt>Multilingüe</dt>
+<dd>Todo el sistema debe estar en las dos lenguas oficiales: valenciano y castellano. Además, debe existir la posibilidad de instalar y configurar otros idiomas (lo cual resulta interesante para el periodo de adaptación del alumnado inmigrante).</dd>
+<dt>Amplia funcionalidad</dt>
+<dd>Debe proveer tanto el sistema operativo como una completa colección de aplicaciones (ofimática, internet, audio, video, gráficos, aplicaciones educativas clasificadas por nivel, etc). En el caso de un servidor (de aula o de centro), adicionalmente, proveer de un conjunto de servicios de red útiles.</dd>
+<dt>Facilidad de uso (y administración)</dt>
+<dd>El entorno ha de ser amigable, fácil de usar y de explorar. Igualmente, es necesaria una administración sencilla del sistema.</dd>
+<dt>Compatibilidad</dt>
+<dd>Compatible con formatos abiertos (PDF, etc ) y propietarios (.doc, .xls, .ppt, etc) para poder trabajar con los documentos elaborados originalmente en MS Windows.</dd>
+<dt>Software libre</dt>
+<dd>Todo lo anterior es posible gracias al código fuente abierto, con licencia libre, en el que se puede adaptar, compartir y colaborar en su mejora continua.</dd>
+</dl>
+<p>El presente manual tiene como objetivo servir de referencia para la instalación, configuración y mantenimiento de la infraestructura de LliureX en un centro docente. Cuando decimos infraestructura nos referimos al menos a un servidor y varios clientes LliureX, bien sea en una sola aula de informática como varias de ellas y -opcionalmente- con un servidor de centro, dependiendo de las necesidades.</p>
+<p>A continuación podemos ver un esquema en el que se destaca el <em>aula 1</em> dentro de la estructura del centro.</p>
+<p class="nwdiag">
+<img src="../_images/nwdiag-b38fef7301859461937a5144b5be973befc40a4b.png" alt="None" width="760" height="732" />
+</p>
+<p>Una de las principales diferencias entre un servidor de aula y uno de centro es que este último tendrá sus clientes repartidos físicamente por el centro (p.e. un equipo por aula en un conjunto de aulas, un par de equipos en la sala de profesores, en la biblioteca, etc).</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="concepts.html" title="Conceptos básicos"
+             >siguiente</a></li>
+        <li class="right" >
+          <a href="../index.html" title="Guía de administración de LliureX Servidor"
+             >anterior</a> |</li>
+        <li><a href="../index.html">Guía de Administración de LliureX Servidor</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES">Licencia CC BY-NC-SA 3.0</a> 2013, Equipo LliureX.
+      Actualizado por última vez en 2013-12-10.
+    Creado con <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3. Tema por <a href="http://github.com/vkvn">vkvn</a>
+    </div>
+  </body>
+</html>
