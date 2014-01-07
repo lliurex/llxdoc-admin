@@ -20,9 +20,9 @@ Compatibilidad
 Software libre
   Todo lo anterior es posible gracias al código fuente abierto, con licencia libre, en el que se puede adaptar, compartir y colaborar en su mejora continua.
 
-El presente manual tiene como objetivo servir de referencia para la instalación, configuración y mantenimiento de la infraestructura de LliureX en un centro docente. Cuando decimos infraestructura nos referimos al menos a un servidor y varios clientes LliureX, bien sea en una sola aula de informática como varias de ellas y -opcionalmente- con un servidor de centro, dependiendo de las necesidades.
+El presente manual tiene como objetivo servir de referencia para la instalación, configuración y mantenimiento de la infraestructura de LliureX en un centro docente. Cuando decimos infraestructura nos referimos al menos a un servidor y varios clientes LliureX, bien sea en una sola aula de informática como en varias de ellas y -opcionalmente- con un servidor de centro, dependiendo de las necesidades del centro.
 
-A continuación podemos ver un esquema en el que se destaca el *aula 1* dentro de la estructura del centro.
+A continuación podemos ver un esquema ejemplo en el que se destaca el *aula 1 de informática* dentro de la estructura del centro.
 
 .. nwdiag::
 
@@ -44,4 +44,3 @@ A continuación podemos ver un esquema en el que se destaca el *aula 1* dentro d
     }
    }
 
-Una de las principales diferencias entre un servidor de aula y uno de centro es que este último tendrá sus clientes repartidos físicamente por el centro (p.e. un equipo por aula en un conjunto de aulas, un par de equipos en la sala de profesores, en la biblioteca, etc). 
