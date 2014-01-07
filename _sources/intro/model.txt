@@ -23,3 +23,5 @@ Apoyándonos en los conceptos que acabamos de ver, el esquema del modelo más si
       'Cliente n';
     }
    }
+
+En este esquema sólo disponemos de un aula de informática. El servidor actúa de intermediario entre la red del centro y los clientes de aula (cada uno de los equipos que utilizan los alumnos del aula). Así pues, sólo nos tenemos que preocupar de mantener actualizada la réplica para proceder a la actualización periódica del aula (tanto de todos los clientes como del propio servidor).
