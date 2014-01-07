@@ -27,7 +27,7 @@ Gestión de clientes LliureX
 ---------------------------
 
 .. toctree::
-   :maxdepth: 3 
+   :maxdepth: 2 
 
    manage/intro
    manage/configure
