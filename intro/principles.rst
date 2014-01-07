@@ -27,20 +27,23 @@ A continuación podemos ver un esquema ejemplo en el que se destaca el *aula 1 d
 .. nwdiag::
 
    nwdiag {
-    internet [shape = cloud];
-    internet -- router;
+
+    Internet [shape = cloud];
+    Internet -- Router;
 
     network centro {
-      router;
-      serv_centro;
-      serv_aula-1;
-      serv_aula-n;
+      label = 'Red del Centro';
+      Router;
+      serv_centro [label = 'Servidor Centro'];
+      serv_aula-1 [label = 'Servidor Aula 1'];
+      serv_aula-n [label = 'Servidor Aula 2'];
     }
     network aula1 {
+      label = 'Red del Aula 1'
       serv_aula-1;
-      alu-1;
-      alu-2;
-      alu-n;
+      alu-1 [label = 'Cliente 1'];
+      alu-2 [label = 'Cliente 2'];
+      alu-n [label = 'Cliente n'];
     }
    }
 
