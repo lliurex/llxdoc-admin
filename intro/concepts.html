@@ -91,19 +91,37 @@
 <p>LliureX ofrece un servidor <em>multifunción</em>, es decir, que incorpora varias funcionalidades en la misma máquina. Actualmente LliureX Servidor puede actuar como:</p>
 <ul class="simple">
 <li>Servidor de ficheros (SAMBA)</li>
-<li>Servidor de autenticación (usuarios y grupos en red, mediante OpenLDAP)</li>
+<li>Servidor de usuarios y grupos en red (Llum y OpenLDAP)</li>
 <li>Servidor de nombres de dominio (DNS)</li>
-<li>Servidor de direcciones IP dinámicas (DHCP)</li>
+<li>Servidor de direcciones IP dinámicas para los equipos (DHCP)</li>
 <li>Servidor de sincronización temporal (NTP)</li>
 <li>Servidor de bases de datos (MySQL)</li>
 <li>Servidor web (Apache)</li>
+<li>Servidor Proxy-caché (Squid)</li>
 <li>Servidor de clientes ligeros (LTSP)</li>
 <li>Servidor de aprendizaje en línea (Moodle)</li>
+<li>Servidor de actualizaciones (LliureX Mirror)</li>
+<li>Servidor de instalación de equipos por red (llx-netinstall)</li>
+<li>Servidor de gestión de equipos (epoptes y clusterssh)</li>
 </ul>
+<p>La colección de servicios es muy amplia. Ningún producto comercial ofrece un <em>software</em> equivalente tras una instalación. Desde LliureX intentamos que la configuración y el mantenimiento del aula sea lo más sencillo posible, sin necesidad de amplios conocimientos de informática, para que cualquier docente con muy pocas horas de formación pueda encargarse de ella.</p>
+<p>En definitiva, LliureX ofrece una importante colección de servicios mediante una infraestructura compleja pero de gestión simplificada.</p>
 </div>
 <div class="section" id="cliente">
 <h2>Cliente<a class="headerlink" href="#cliente" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Un cliente es un equipo normal que hace uso de los servicios ofertados por un servidor o servidores. Pero un cliente puede actuar de varias maneras en función de sus capacidades.</p>
+<p>Un cliente es un equipo normal que hace uso de los servicios ofertados por un servidor o servidores. Pero un cliente puede actuar de varias maneras en función de sus capacidades. Las posibilidades son:</p>
+<dl class="docutils">
+<dt>Cliente normal</dt>
+<dd>Equipo tradicional en el que se instala la versión de LliureX Cliente en su disco duro. La instalación se puede realizar por red o mediante llave USB. Esta versión está diseñada para coordinarse con el Servidor y aprovechar los servicios que éste ofrece. Por ejemplo, el nombre de usuario que se introduzca para comenzar la sesión será validado en el Servidor LliureX y, en función del grupo al que pertenezca, le serán aplicados unos permisos concretos así como unas carpetas determinadas.</dd>
+<dt>Cliente ligero</dt>
+<dd>Como se verá más adelante (ver apartado <a class="reference internal" href="../manage/intro.html"><em>Introducción a LliureX LTSP</em></a>), los clientes ligeros tienen una serie de ventajas (reducido tamaño, consumo y facilidad de gestión) que los hacen muy interesantes para un aula. Un cliente ligero sólo necesita el <em>hardware</em> que le permita mostrar una sesión gráfica en el servidor. Por ello, la ejecución de las aplicaciones y las necesidades de almacenamiento que tengan estas (RAM y disco duro) tienen lugar en el servidor.</dd>
+<dt>Cliente semi-ligero</dt>
+<dd>Para los casos en los que el servidor no tiene suficientes recursos (poca RAM o procesador antiguo) y el equipo no es un cliente ligero, se puede configurar LliureX LTSP para repartir los recursos entre el servidor y el cliente. Como se ha podido apreciar, el adjetivo de <em>ligero</em> se aplica al <em>esfuerzo</em> que tendrá que realizar el equipo del usuario final para poder llevar en marcha las aplicaciones que vaya a usar.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Existe la posibilidad de configurar otras versiones de LliureX (como Infantil o Lleuger) para que arranquen como cliente de LliureX Servidor. Para ello es necesario configurarlo apropiadamente en LliureX LTSP (en el caso de clientes semi-ligeros o ligeros). Más información en <a class="reference internal" href="../manage/intro.html"><em>Introducción a LliureX LTSP</em></a></p>
+</div>
 </div>
 </div>
 
@@ -127,7 +145,7 @@
     </div>
     <div class="footer">
         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES">Licencia CC BY-NC-SA 3.0</a> 2013, Equipo LliureX.
-      Actualizado por última vez en 2014-01-07.
+      Actualizado por última vez en 2014-01-08.
     Creado con <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2. Tema por <a href="http://github.com/vkvn">vkvn</a>
     </div>
   </body>
