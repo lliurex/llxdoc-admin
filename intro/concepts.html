@@ -52,6 +52,12 @@
 <li><a class="reference internal" href="#">Conceptos básicos</a><ul>
 <li><a class="reference internal" href="#servidor">Servidor</a></li>
 <li><a class="reference internal" href="#cliente">Cliente</a></li>
+<li><a class="reference internal" href="#servicios">Servicios</a><ul>
+<li><a class="reference internal" href="#ficheros">Ficheros</a></li>
+<li><a class="reference internal" href="#usuarios-y-grupos-en-red">Usuarios y grupos en red</a></li>
+<li><a class="reference internal" href="#nombres-de-dominio">Nombres de dominio</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -123,6 +129,21 @@
 <p class="last">Existe la posibilidad de configurar otras versiones de LliureX (como Infantil o Lleuger) para que arranquen como cliente de LliureX Servidor. Para ello es necesario configurarlo apropiadamente en LliureX LTSP (en el caso de clientes semi-ligeros o ligeros). Más información en <a class="reference internal" href="../manage/intro.html"><em>Introducción a LliureX LTSP</em></a></p>
 </div>
 </div>
+<div class="section" id="servicios">
+<h2>Servicios<a class="headerlink" href="#servicios" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="ficheros">
+<h3>Ficheros<a class="headerlink" href="#ficheros" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>La función de servidor de ficheros permite compartir (de manera transparente) uno o varios directorios del servidor con uno o varios equipos de la red. En el equipo cliente aparecerá formando parte de su sistema de ficheros. Por ejemplo, algunos directorios de la carpeta de usuario (por ejemplo <em>Documentos</em>, <em>Descargas</em>, <em>Escritorio</em> y <em>Compartido</em>) están físicamente localizados en el servidor. De esta manera, es posible tener las <em>mismas</em> carpetas (con su contenido) con independencia del equipo cliente al que nos conectemos o también hacer copias de seguridad centralizadas en el servidor.</p>
+</div>
+<div class="section" id="usuarios-y-grupos-en-red">
+<h3>Usuarios y grupos en red<a class="headerlink" href="#usuarios-y-grupos-en-red" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Para poder definir perfiles de usuarios (administrador, profesor, alumno) y aplicar los permisos adecuados es necesario disponer de una base de datos de usuarios y grupos. Esta base de datos se configura inicialmente con la información de GESCEN o ITACA (puede ver el proceso en el apartado <a class="reference internal" href="../configure/import_users.html"><em>Importación de usuarios</em></a>). Se crearán grupos genéricos (como el de profesores) y específicos (correspondientes a los grupos definidos en el curso). Para poder gestionar grupos o usuarios nuevos puede consultar el apartado <a class="reference internal" href="../configure/manage_users.html"><em>Gestión de usuarios y grupos</em></a>. Así, al introducir nuestro <em>nombre de usuario</em> y <em>contraseña</em> en la pantalla de entrada estaremos autorizados por el servicio de autenticación de usuarios y nos apareceran los directorios correspondientes a nuestro perfil de usuario.</p>
+</div>
+<div class="section" id="nombres-de-dominio">
+<h3>Nombres de dominio<a class="headerlink" href="#nombres-de-dominio" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Para poder acceder a otra máquina es necesario saber su dirección IP (p.e. 10.2.1.254). Para no tener que recordar los números IP de todas las máquinas a las que nos podamos conectar, se creó el servicio de nombres de dominio. Este servicio traduce un nombre de dominio (p.e. <em>mirror</em>) a un número IP (de la misma manera que una guía telefónica o la agenda de contactos de un teléfono móvil).</p>
+</div>
+</div>
 </div>
 
 
@@ -145,7 +166,7 @@
     </div>
     <div class="footer">
         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES">Licencia CC BY-NC-SA 3.0</a> 2013, Equipo LliureX.
-      Actualizado por última vez en 2014-01-08.
+      Actualizado por última vez en 2014-01-10.
     Creado con <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2. Tema por <a href="http://github.com/vkvn">vkvn</a>
     </div>
   </body>
