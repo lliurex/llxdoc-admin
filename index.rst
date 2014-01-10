@@ -22,6 +22,7 @@ Configuración de LliureX Servidor
    configure/install
    configure/setup
    configure/import_users
+   configure/manage_users
 
 Gestión de clientes LliureX 
 ---------------------------

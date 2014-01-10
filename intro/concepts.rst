@@ -42,3 +42,21 @@ Cliente semi-ligero
 
 .. note::
   Existe la posibilidad de configurar otras versiones de LliureX (como Infantil o Lleuger) para que arranquen como cliente de LliureX Servidor. Para ello es necesario configurarlo apropiadamente en LliureX LTSP (en el caso de clientes semi-ligeros o ligeros). Más información en :doc:`../manage/intro`
+
+Servicios
+---------
+
+Ficheros
+^^^^^^^^
+
+La función de servidor de ficheros permite compartir (de manera transparente) uno o varios directorios del servidor con uno o varios equipos de la red. En el equipo cliente aparecerá formando parte de su sistema de ficheros. Por ejemplo, algunos directorios de la carpeta de usuario (por ejemplo *Documentos*, *Descargas*, *Escritorio* y *Compartido*) están físicamente localizados en el servidor. De esta manera, es posible tener las *mismas* carpetas (con su contenido) con independencia del equipo cliente al que nos conectemos o también hacer copias de seguridad centralizadas en el servidor.
+
+Usuarios y grupos en red
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Para poder definir perfiles de usuarios (administrador, profesor, alumno) y aplicar los permisos adecuados es necesario disponer de una base de datos de usuarios y grupos. Esta base de datos se configura inicialmente con la información de GESCEN o ITACA (puede ver el proceso en el apartado :doc:`../configure/import_users`). Se crearán grupos genéricos (como el de profesores) y específicos (correspondientes a los grupos definidos en el curso). Para poder gestionar grupos o usuarios nuevos puede consultar el apartado :doc:`../configure/manage_users`. Así, al introducir nuestro *nombre de usuario* y *contraseña* en la pantalla de entrada estaremos autorizados por el servicio de autenticación de usuarios y nos apareceran los directorios correspondientes a nuestro perfil de usuario.
+
+Nombres de dominio
+^^^^^^^^^^^^^^^^^^
+
+Para poder acceder a otra máquina es necesario saber su dirección IP (p.e. 10.2.1.254). Para no tener que recordar los números IP de todas las máquinas a las que nos podamos conectar, se creó el servicio de nombres de dominio. Este servicio traduce un nombre de dominio (p.e. *mirror*) a un número IP (de la misma manera que una guía telefónica o la agenda de contactos de un teléfono móvil). 
