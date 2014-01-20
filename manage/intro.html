@@ -26,7 +26,7 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="top" title="Guía de Administración de LliureX Servidor v 0.1" href="../index.html" />
     <link rel="next" title="Configuración de LliureX LTSP" href="configure.html" />
-    <link rel="prev" title="Importación de usuarios" href="../configure/import_users.html" /><link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Open+Sans:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="prev" title="Gestión de usuarios y grupos" href="../configure/manage_users.html" /><link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Open+Sans:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
 <link href="../_static/solarized-dark.css" rel="stylesheet">
   </head>
   <body>
@@ -37,7 +37,7 @@
           <a href="configure.html" title="Configuración de LliureX LTSP"
              accesskey="N">siguiente</a></li>
         <li class="right" >
-          <a href="../configure/import_users.html" title="Importación de usuarios"
+          <a href="../configure/manage_users.html" title="Gestión de usuarios y grupos"
              accesskey="P">anterior</a> |</li>
         <li><a href="../index.html">Guía de Administración de LliureX Servidor</a> &raquo;</li> 
       </ul>
@@ -60,8 +60,8 @@
 </ul>
 
   <h4>Tema anterior</h4>
-  <p class="topless"><a href="../configure/import_users.html"
-                        title="capítulo anterior">Importación de usuarios</a></p>
+  <p class="topless"><a href="../configure/manage_users.html"
+                        title="capítulo anterior">Gestión de usuarios y grupos</a></p>
   <h4>Próximo tema</h4>
   <p class="topless"><a href="configure.html"
                         title="próximo capítulo">Configuración de LliureX LTSP</a></p>
@@ -127,9 +127,9 @@
 <dt>Archivo <em>imagen</em> (<em>.img</em>)</dt>
 <dd>Fichero <em>imagen</em> generado a partir de un directorio <em>chroot</em> concreto. Este fichero imagen será enviado por red al equipo cliente (tanto ligero como semi-ligero). El proceso de    generación suele tardar alrededor de unos 15 minutos.</dd>
 <dt>Cliente ligero</dt>
-<dd>Como ya se ha explicado antes, se trata de un equipo de bajas prestaciones pero suficiente para poder mostrar la imagen de la sesión en el servidor en la pantalla. Tanto los procesos de cálculo como el almacenamiento en memoria se producen en el servidor. Es barato (fácil de reemplazar) y también reduce el tiempo de administración (todos los clientes ligeros tienen -o suelen tener por defecto- la misma imagen o configuración).</dd>
+<dd>Como ya se ha explicado antes, se trata de un equipo de bajas prestaciones pero suficiente para poder mostrar la imagen de la sesión en el servidor en la pantalla. Tanto los procesos de cálculo como el almacenamiento en memoria se producen en el servidor. Es barato (fácil de reemplazar) y también reduce el tiempo de administración (todos los clientes ligeros tienen -o suelen tener por defecto- la misma imagen o configuración). No dispone de disco duro y, por lo tanto, no se puede instalar LliureX en él.</dd>
 <dt>Cliente semi-ligero (<em>fat-thinclient</em>)</dt>
-<dd>Por contra, un cliente semiligero necesita un poco más de recursos dado que el procesamiento y la memoria son locales (pero sigue sin necesitar disco duro). Utiliza menos recursos del servidor (permitiendo más clientes para el mismo <em>hardware</em> si lo comparamos con los clientes ligeros normales). Además, puede hacer funcionar <em>hardware</em> que siendo sólo ligero resulta imposible. La desventaja es un mayor tiempo de carga y, por lo tanto, de tráfico en la red local. En conclusión: sólo es recomendabl en aquellos casos en los que haya que conectar <em>hardware</em> que no funcione en los clientes ligeros o en los que el servidor tiene poca RAM, el procesador es antiguo y los clientes tienen suficiente capacidad para ejecutar la imagen.</dd>
+<dd>Por contra, un cliente semiligero necesita un poco más de recursos dado que el procesamiento y la memoria son locales (pero sigue sin necesitar disco duro). Utiliza menos recursos del servidor (podrá gestionar más clientes para el mismo <em>hardware</em> si lo comparamos con los clientes ligeros normales). Además, puede hacer funcionar <em>hardware</em> que siendo sólo ligero resulta imposible. La desventaja es un mayor tiempo de carga y, por lo tanto, de tráfico en la red local. En conclusión: sólo es recomendable en aquellos casos en los que haya que conectar <em>hardware</em> que no funcione en los clientes ligeros o en los que el servidor tenga poca RAM, el procesador sea antiguo y los clientes tengan suficiente capacidad para ejecutar la imagen.</dd>
 </dl>
 <div class="admonition note">
 <p class="first admonition-title">Nota</p>
@@ -160,14 +160,14 @@
           <a href="configure.html" title="Configuración de LliureX LTSP"
              >siguiente</a></li>
         <li class="right" >
-          <a href="../configure/import_users.html" title="Importación de usuarios"
+          <a href="../configure/manage_users.html" title="Gestión de usuarios y grupos"
              >anterior</a> |</li>
         <li><a href="../index.html">Guía de Administración de LliureX Servidor</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES">Licencia CC BY-NC-SA 3.0</a> 2013, Equipo LliureX.
-      Actualizado por última vez en 2013-12-13.
+      Actualizado por última vez en 2014-01-20.
     Creado con <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2. Tema por <a href="http://github.com/vkvn">vkvn</a>
     </div>
   </body>
