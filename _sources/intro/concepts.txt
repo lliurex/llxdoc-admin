@@ -56,7 +56,13 @@ Usuarios y grupos en red
 
 Para poder definir perfiles de usuarios (administrador, profesor, alumno) y aplicar los permisos adecuados es necesario disponer de una base de datos de usuarios y grupos. Esta base de datos se configura inicialmente con la información de GESCEN o ITACA (puede ver el proceso en el apartado :doc:`../configure/import_users`). Se crearán grupos genéricos (como el de profesores) y específicos (correspondientes a los grupos definidos en el curso). Para poder gestionar grupos o usuarios nuevos puede consultar el apartado :doc:`../configure/manage_users`. Así, al introducir nuestro *nombre de usuario* y *contraseña* en la pantalla de entrada estaremos autorizados por el servicio de autenticación de usuarios y nos apareceran los directorios correspondientes a nuestro perfil de usuario.
 
+Asignación dinámica de números IP 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Todo equipo necesita un número IP (que lo identifica en la red) para poder establecer una comunicación con cualquier otro equipo. El servicio de DHCP se encarga de proporcionar dinámicamente un número IP durante el arranque del cliente.
+
 Nombres de dominio
 ^^^^^^^^^^^^^^^^^^
 
-Para poder acceder a otra máquina es necesario saber su dirección IP (p.e. 10.2.1.254). Para no tener que recordar los números IP de todas las máquinas a las que nos podamos conectar, se creó el servicio de nombres de dominio. Este servicio traduce un nombre de dominio (p.e. *mirror*) a un número IP (de la misma manera que una guía telefónica o la agenda de contactos de un teléfono móvil). 
+Para poder acceder a otra máquina es necesario saber su dirección IP (p.e. 10.2.1.254). Para no tener que recordar los números IP de todas las máquinas a las que nos podamos conectar, se creó el servicio de *nombres de dominio*. Este servicio traduce un *nombre de dominio* (p.e. la palabra *mirror*) a un número IP (de la misma manera que una guía telefónica o la agenda de contactos de un teléfono móvil).
+
