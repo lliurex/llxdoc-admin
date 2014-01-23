@@ -47,6 +47,16 @@
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/lliurex.png" alt="Logo"/>
             </a></p>
+  <h3><a href="../index.html">Tabla de Contenidos</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Instalación</a><ul>
+<li><a class="reference internal" href="#requisitos-hardware-del-servidor">Requisitos hardware del servidor</a></li>
+<li><a class="reference internal" href="#requisitos-de-la-instalacion-de-red">Requisitos de la instalación de red</a></li>
+<li><a class="reference internal" href="#consideraciones-previas-antes-de-comenzar-la-instalacion">Consideraciones previas antes de comenzar la instalación</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Tema anterior</h4>
   <p class="topless"><a href="../intro/model.html"
                         title="capítulo anterior">Modelo Cliente/Servidor de LliureX</a></p>
@@ -76,6 +86,48 @@
             
   <div class="section" id="instalacion">
 <h1>Instalación<a class="headerlink" href="#instalacion" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="requisitos-hardware-del-servidor">
+<h2>Requisitos hardware del servidor<a class="headerlink" href="#requisitos-hardware-del-servidor" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Para un adecuado funcionamiento, la configuración mínima recomendada es la siguiente:</p>
+<ul class="simple">
+<li>Procesador:  Pentium IV 3 GHz</li>
+<li>Memoria RAM: 4 GB</li>
+<li>Disco duro: 1 disco duro de 80 GB</li>
+<li>2 tarjetas de red: cada una a 1 Gbps</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Para dar servicio a clientes ligeros los requisitos son mayores (ver apartado <a class="reference internal" href="../manage/intro.html"><em>Introducción a LliureX LTSP</em></a>)</p>
+</div>
+</div>
+<div class="section" id="requisitos-de-la-instalacion-de-red">
+<h2>Requisitos de la instalación de red<a class="headerlink" href="#requisitos-de-la-instalacion-de-red" title="Enlazar permanentemente con este título">¶</a></h2>
+<ul class="simple">
+<li>Acceso a Internet de banda ancha</li>
+<li>Cableado estructurado (categoría 5e)</li>
+<li>Conmutador (<em>switch</em>) con al menos 1 puerto a 1 Gbps (para el servidor) y tantos puertos como equipos a 100 Mbps haya en el aula (se recomienda tener todos los puertos a 1Gbps).</li>
+</ul>
+</div>
+<div class="section" id="consideraciones-previas-antes-de-comenzar-la-instalacion">
+<h2>Consideraciones previas antes de comenzar la instalación<a class="headerlink" href="#consideraciones-previas-antes-de-comenzar-la-instalacion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Antes de proceder la instalación hay que tener en cuenta que un servidor LliureX necesita dos interfaces (tarjetas) de red. Una interfaz que sirve para unir el servidor a la red del centro (interfaz externa) y la otra que sirve para dar servicios a los equipos del aula (interfaz interna).</p>
+<p>Convenciones que se han decidido en LliureX:</p>
+<ul class="simple">
+<li>La interfaz externa es <strong>eth1</strong></li>
+<li>La interfaz interna es <strong>eth0</strong> y se mantendrá la siguiente configuración: IP = 10.2.1.254/24 (esto no se aplica a la configuración del modelo de centro).</li>
+</ul>
+<div class="admonition important">
+<p class="first admonition-title">Importante</p>
+<p class="last">Es fundamental que las interfaces internas del aula (servidor y cliente) no pertenezcan a la misma red física que la externa.</p>
+</div>
+<p>En particular se debe tener en cuenta:</p>
+<ul class="simple">
+<li>Separar las interfaces internas y externas del servidor de aula.</li>
+<li>Conectar la interfaz interna del servidor al conmutador (<em>switch</em>) del aula.</li>
+<li>Las rosetas de conexión de los clientes del aula conectadas al mismo <em>switch</em> que la conexión interna del servidor.</li>
+<li>En caso de que el <em>switch</em> tenga puertos a diferente velocidad, conectar el servidor al puerto más rápido.</li>
+</ul>
+</div>
 </div>
 
 
@@ -98,7 +150,7 @@
     </div>
     <div class="footer">
         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES">Licencia CC BY-NC-SA 3.0</a> 2013, Equipo LliureX.
-      Actualizado por última vez en 2013-12-11.
+      Actualizado por última vez en 2014-01-23.
     Creado con <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2. Tema por <a href="http://github.com/vkvn">vkvn</a>
     </div>
   </body>
