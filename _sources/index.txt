@@ -1,7 +1,7 @@
 Guía de administración de LliureX Servidor
 ==========================================
 
-.. warning:: Versión en desarrollo. Última actualización: |today|
+.. warning:: Versión en desarrollo. Ver última actualización al pie de página.
 
 Introducción a LliureX Servidor
 -------------------------------
