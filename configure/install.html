@@ -126,7 +126,18 @@
 <li>Conectar la interfaz interna del servidor al conmutador (<em>switch</em>) del aula.</li>
 <li>Las rosetas de conexión de los clientes del aula conectadas al mismo <em>switch</em> que la conexión interna del servidor.</li>
 <li>En caso de que el <em>switch</em> tenga puertos a diferente velocidad, conectar el servidor al puerto más rápido.</li>
+<li>Si el servidor dispone de dos discos duros (como suele ser en la dotación de centros) se recomienda emplear todo el segundo disco para el directorio <strong>/net</strong></li>
+<li>Cuando se le solicite un nombre de usuario (administrador local del servidor), se recomienda usar <em>adminN</em> siendo <em>N</em> el número de aula de la instalación (reservando <em>admin0</em> para el servidor de centro).</li>
+<li>Como nombre del equipo parece sensato incluir igualmente el número del aula. Ejemplos válidos serían: <em>srv1, aula1, srv_aula1</em>, etc.</li>
 </ul>
+<div class="admonition tip">
+<p class="first admonition-title">Truco</p>
+<p class="last">Para asignar el segundo disco duro al directorio <strong>/net</strong> hay que seleccionar como tipo de instalación la opción &#8220;Algo más&#8221; (<em>Puede crear particiones, redimensionarlas o elegir varias particiones para LLiureX</em>). En el primer disco, necesitará como mínimo una partición de <em>swap</em> o intercambio (se recomienda un tamaño ligeramente superior al de la memoria RAM, p.e. si la RAM son 4GB, escoger 5GB de <em>swap</em>). El resto del primer disco se puede asignar al directorio raíz (/). Se recomienda el sistema de ficheros <em>ext4</em> tanto para la partición del directorio raíz como para la de <em>/net</em>. Finalmente se asigna todo el segundo disco al montaje de <em>/net</em>.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">En el primer arranque, después de finalizar la instalación del servidor, es muy recomendable realizar una actualización del mismo.</p>
+</div>
 </div>
 </div>
 
@@ -150,7 +161,7 @@
     </div>
     <div class="footer">
         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES">Licencia CC BY-NC-SA 3.0</a> 2013, Equipo LliureX.
-      Actualizado por última vez en 2014-01-23.
+      Actualizado por última vez en 2014-01-27.
     Creado con <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2. Tema por <a href="http://github.com/vkvn">vkvn</a>
     </div>
   </body>

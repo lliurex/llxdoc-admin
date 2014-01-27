@@ -76,8 +76,18 @@
             
   <div class="section" id="configuracion-inicial">
 <h1>Configuración inicial<a class="headerlink" href="#configuracion-inicial" title="Enlazar permanentemente con este título">¶</a></h1>
-<p>En la nueva versión se ha añadido el usuario <strong>netadmin</strong> para la administración. Este usuario se genera al inicializar el servidor con el asistente (<em>zero-server-wizard</em>) y lo podremos utilizar para entrar en cualquier equipo de la red (ya que se da de alta en LDAP y tiene permisos de administración).</p>
-<p>Hay que diferenciar el usuario <strong>netadmin</strong> del usuario que creamos al instalar el servidor (que será administrado local y no podrá entrar en el resto de equipos de la red).</p>
+<p>Al arrancar la máquina con el nuevo sistema, en primer lugar se muestra una ventana para el inicio de sesión de usuario. Introduzca el nombre de usuario y contraseña del usuario (los que haya especificado durante la instalación).</p>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Le recordamos que es muy recomendable realizar una actualización del servidor antes de comenzar la configuración inicial del mismo.</p>
+</div>
+<p>El servidor Lliurex 13.06 incluye un asistente llamado <em>Zero Server Wizard</em> que permite realizar todo el proceso de configuración de manera automática y en cómodos pasos. Para acceder a esta herramienta de configuración automática vaya al menú <em>Aplicaciones</em> -&gt; <em>Administración de LliureX</em> -&gt; <em>Centro de Control LliureX</em>. Una vez dentro del <em>Centro de Control de LliureX</em> acceda a la pestaña <em>Sistema</em> y ejecute <em>Zero Server Wizard</em>. Se abrirá una ventana con las siguientes opciones marcadas por defecto:</p>
+<img alt="../_images/Zero-Server-Wizard_001.png" src="../_images/Zero-Server-Wizard_001.png" />
+<p>En la nueva versión de LliureX se ha añadido el usuario <strong>netadmin</strong> para la administración global. Este usuario se genera al inicializar el servidor con el asistente (<em>zero-server-wizard</em>) y lo podremos utilizar para entrar en cualquier equipo de la red (ya que se da de alta en LDAP y tiene permisos de administración).</p>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Hay que diferenciar el usuario <strong>netadmin</strong> del usuario que creamos al instalar el servidor (que será administrado local y no podrá entrar en el resto de equipos de la red).</p>
+</div>
 </div>
 
 
@@ -100,7 +110,7 @@
     </div>
     <div class="footer">
         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES">Licencia CC BY-NC-SA 3.0</a> 2013, Equipo LliureX.
-      Actualizado por última vez en 2013-12-13.
+      Actualizado por última vez en 2014-01-27.
     Creado con <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2. Tema por <a href="http://github.com/vkvn">vkvn</a>
     </div>
   </body>
