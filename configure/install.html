@@ -51,7 +51,7 @@
   <ul>
 <li><a class="reference internal" href="#">Instalación</a><ul>
 <li><a class="reference internal" href="#requisitos-hardware-del-servidor">Requisitos hardware del servidor</a></li>
-<li><a class="reference internal" href="#requisitos-de-la-instalacion-de-red">Requisitos de la instalación de red</a></li>
+<li><a class="reference internal" href="#requisitos-minimos-de-la-infraestructura-de-red-del-centro">Requisitos mínimos de la infraestructura de red del centro</a></li>
 <li><a class="reference internal" href="#consideraciones-previas-antes-de-comenzar-la-instalacion">Consideraciones previas antes de comenzar la instalación</a></li>
 </ul>
 </li>
@@ -100,8 +100,8 @@
 <p class="last">Para dar servicio a clientes ligeros los requisitos son mayores (ver apartado <a class="reference internal" href="../manage/intro.html"><em>Introducción a LliureX LTSP</em></a>)</p>
 </div>
 </div>
-<div class="section" id="requisitos-de-la-instalacion-de-red">
-<h2>Requisitos de la instalación de red<a class="headerlink" href="#requisitos-de-la-instalacion-de-red" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="requisitos-minimos-de-la-infraestructura-de-red-del-centro">
+<h2>Requisitos mínimos de la infraestructura de red del centro<a class="headerlink" href="#requisitos-minimos-de-la-infraestructura-de-red-del-centro" title="Enlazar permanentemente con este título">¶</a></h2>
 <ul class="simple">
 <li>Acceso a Internet de banda ancha</li>
 <li>Cableado estructurado (categoría 5e)</li>
@@ -126,7 +126,7 @@
 <li>Conectar la interfaz interna del servidor al conmutador (<em>switch</em>) del aula.</li>
 <li>Las rosetas de conexión de los clientes del aula conectadas al mismo <em>switch</em> que la conexión interna del servidor.</li>
 <li>En caso de que el <em>switch</em> tenga puertos a diferente velocidad, conectar el servidor al puerto más rápido.</li>
-<li>Si el servidor dispone de dos discos duros (como suele ser en la dotación de centros) se recomienda emplear todo el segundo disco para el directorio <strong>/net</strong></li>
+<li>Si el servidor dispone de dos discos duros (como suele ser en la dotación de centros) se recomienda emplear todo el segundo disco para el directorio <strong>/net</strong> (ver apartado <a class="reference internal" href="../advanced/add_disc.html"><em>Añadir un disco secundario</em></a>).</li>
 <li>Cuando se le solicite un nombre de usuario (administrador local del servidor), se recomienda usar <em>adminN</em> siendo <em>N</em> el número de aula de la instalación (reservando <em>admin0</em> para el servidor de centro).</li>
 <li>Como nombre del equipo parece sensato incluir igualmente el número del aula. Ejemplos válidos serían: <em>srv1, aula1, srv_aula1</em>, etc.</li>
 </ul>
@@ -134,6 +134,7 @@
 <p class="first admonition-title">Truco</p>
 <p class="last">Para asignar el segundo disco duro al directorio <strong>/net</strong> hay que seleccionar como tipo de instalación la opción &#8220;Algo más&#8221; (<em>Puede crear particiones, redimensionarlas o elegir varias particiones para LLiureX</em>). En el primer disco, necesitará como mínimo una partición de <em>swap</em> o intercambio (se recomienda un tamaño ligeramente superior al de la memoria RAM, p.e. si la RAM son 4GB, escoger 5GB de <em>swap</em>). El resto del primer disco se puede asignar al directorio raíz (/). Se recomienda el sistema de ficheros <em>ext4</em> tanto para la partición del directorio raíz como para la de <em>/net</em>. Finalmente se asigna todo el segundo disco al montaje de <em>/net</em>. Puede ver este proceso con más detalle en el apartado <a class="reference internal" href="../advanced/add_disc.html"><em>Añadir un disco secundario</em></a>.</p>
 </div>
+<p>Con todas estas consideraciones previas, puede proceder a la instalación estándar del servidor. Aplique las modificaciones que haya decidido anteriormente (usuario administrador local, particiones, nombre del equipo, ...).</p>
 <div class="admonition note">
 <p class="first admonition-title">Nota</p>
 <p class="last">En el primer arranque, después de finalizar la instalación del servidor, es muy recomendable realizar una actualización del mismo.</p>
