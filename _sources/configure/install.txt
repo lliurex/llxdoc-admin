@@ -29,7 +29,7 @@ Antes de proceder la instalación hay que tener en cuenta que un servidor Lliure
 Convenciones que se han decidido en LliureX:
 
 * La interfaz externa es **eth1**
-* La interfaz interna es **eth0** y se mantendrá la siguiente configuración: IP = 10.2.1.254/24 (esto no se aplica a la configuración del modelo de centro).
+* La interfaz interna es **eth0**
 
 .. important::
   Es fundamental que las interfaces internas del aula (servidor y cliente) no pertenezcan a la misma red física que la externa.
@@ -45,7 +45,7 @@ En particular se debe tener en cuenta:
 * Como nombre del equipo parece sensato incluir igualmente el número del aula. Ejemplos válidos serían: *srv1, aula1, srv_aula1*, etc.
 
 .. tip::
-  Para asignar el segundo disco duro al directorio **/net** hay que seleccionar como tipo de instalación la opción "Algo más" (*Puede crear particiones, redimensionarlas o elegir varias particiones para LLiureX*). En el primer disco, necesitará como mínimo una partición de *swap* o intercambio (se recomienda un tamaño ligeramente superior al de la memoria RAM, p.e. si la RAM son 4GB, escoger 5GB de *swap*). El resto del primer disco se puede asignar al directorio raíz (/). Se recomienda el sistema de ficheros *ext4* tanto para la partición del directorio raíz como para la de */net*. Finalmente se asigna todo el segundo disco al montaje de */net*.
+  Para asignar el segundo disco duro al directorio **/net** hay que seleccionar como tipo de instalación la opción "Algo más" (*Puede crear particiones, redimensionarlas o elegir varias particiones para LLiureX*). En el primer disco, necesitará como mínimo una partición de *swap* o intercambio (se recomienda un tamaño ligeramente superior al de la memoria RAM, p.e. si la RAM son 4GB, escoger 5GB de *swap*). El resto del primer disco se puede asignar al directorio raíz (/). Se recomienda el sistema de ficheros *ext4* tanto para la partición del directorio raíz como para la de */net*. Finalmente se asigna todo el segundo disco al montaje de */net*. Puede ver este proceso con más detalle en el apartado :doc:`../advanced/add_disc`.
 
 .. note::
   En el primer arranque, después de finalizar la instalación del servidor, es muy recomendable realizar una actualización del mismo.
