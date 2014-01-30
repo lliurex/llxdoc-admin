@@ -99,6 +99,12 @@
 <div class="section" id="modelo-de-aula-lliurex">
 <h2>Modelo de Aula LliureX<a class="headerlink" href="#modelo-de-aula-lliurex" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Este modelo está pensado para soportar la configuración de aulas independientes. Es la elección lógica cuando los únicos ordenadores del centro están localizados en una o varias aulas. Las ventajas de este modelo son las siguientes:</p>
+<ul class="simple">
+<li>Gestión simplificada de los equipos cliente (instalación por red, actualizaciones centralizadas, control del aula, etc.)</li>
+<li>Ahorro en ancho de banda al actuar de servidor proxy-caché (agilizando la consulta repetida a una misma página)</li>
+<li>Perfil de usuario (el alumno puede cambiar de puesto en el aula, teniendo acceso a su carpeta personal)</li>
+<li>Compartición sencilla de ficheros y recogida de trabajos de los alumnos</li>
+</ul>
 </div>
 <div class="section" id="modelo-de-centro-lliurex">
 <h2>Modelo de Centro LliureX<a class="headerlink" href="#modelo-de-centro-lliurex" title="Enlazar permanentemente con este título">¶</a></h2>
@@ -109,7 +115,14 @@
 <li>Replicación de archivos entre servidores</li>
 </ul>
 <p>Es decir, con nuestro usuario y contraseña, podemos acceder a nuestro perfil (carpeta personal, departamental, grupos, etc) desde cualquier equipo cliente del centro.</p>
-<p>Para ello hay que cumplir con una serie de requisitos:</p>
+<p>Para ello hay que cumplir con una serie de recomendaciones:</p>
+<ul class="simple">
+<li>Infraestructura de la red del centro en óptimas condiciones (recomendable categoría 6)</li>
+<li>Planificar la distribución de servidores por el centro
+* Decidir cual actuará como maestro (aunque no haya una red jerárquica sino de tipo <em>bus</em>)
+* Adecuar el <em>hardware</em> a la carga (cantidad de clientes y tipo) que vaya a tener cada servidor
+* Disponer las conexiones de mayor ancho de banda para la comunicación (sincronización) entre servidores</li>
+</ul>
 </div>
 <div class="section" id="asistente-de-configuracion-del-servidor-lliurex">
 <h2>Asistente de configuración del servidor LliureX<a class="headerlink" href="#asistente-de-configuracion-del-servidor-lliurex" title="Enlazar permanentemente con este título">¶</a></h2>
@@ -143,7 +156,7 @@
     </div>
     <div class="footer">
         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES">Licencia CC BY-NC-SA 3.0</a> 2013, Equipo LliureX.
-      Actualizado por última vez en 2014-01-29.
+      Actualizado por última vez en 2014-01-30.
     Creado con <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2. Tema por <a href="http://github.com/vkvn">vkvn</a>
     </div>
   </body>

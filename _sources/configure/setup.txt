@@ -16,8 +16,13 @@ Modelo de Aula LliureX
 
 Este modelo está pensado para soportar la configuración de aulas independientes. Es la elección lógica cuando los únicos ordenadores del centro están localizados en una o varias aulas. Las ventajas de este modelo son las siguientes:
 
+* Gestión simplificada de los equipos cliente (instalación por red, actualizaciones centralizadas, control del aula, etc.)
+* Ahorro en ancho de banda al actuar de servidor proxy-caché (agilizando la consulta repetida a una misma página)
+* Perfil de usuario (el alumno puede cambiar de puesto en el aula, teniendo acceso a su carpeta personal)
+* Compartición sencilla de ficheros y recogida de trabajos de los alumnos
+
 .. todo::
-   Ventajas modelo de aula
+   Diagrama de ejemplo
 
 Modelo de Centro LliureX
 ------------------------
@@ -31,10 +36,16 @@ Las ventajas que se pueden obtener de este modelo son:
 
 Es decir, con nuestro usuario y contraseña, podemos acceder a nuestro perfil (carpeta personal, departamental, grupos, etc) desde cualquier equipo cliente del centro.
 
-Para ello hay que cumplir con una serie de requisitos:
+Para ello hay que cumplir con una serie de recomendaciones:
+
+* Infraestructura de la red del centro en óptimas condiciones (recomendable categoría 6)
+* Planificar la distribución de servidores por el centro
+  * Decidir cual actuará como maestro (aunque no haya una red jerárquica sino de tipo *bus*)
+  * Adecuar el *hardware* a la carga (cantidad de clientes y tipo) que vaya a tener cada servidor
+  * Disponer las conexiones de mayor ancho de banda para la comunicación (sincronización) entre servidores
 
 .. todo::
-   Requisitos modelo de centro
+   Diagrama de ejemplo
 
 Asistente de configuración del servidor LliureX
 -----------------------------------------------
