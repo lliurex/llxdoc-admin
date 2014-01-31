@@ -153,6 +153,6 @@ doctest:
 	@echo "Testing of doctests in the sources finished, look at the " \
 	      "results in $(BUILDDIR)/doctest/output.txt."
 
-github: html
+github: clean html
 	ghp-import -n -m "Syncing html build" $(BUILDDIR)/html
 	git push --all
