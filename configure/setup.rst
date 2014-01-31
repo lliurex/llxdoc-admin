@@ -21,8 +21,26 @@ Este modelo está pensado para soportar la configuración de aulas independiente
 * Perfil de usuario (el alumno puede cambiar de puesto en el aula, teniendo acceso a su carpeta personal)
 * Compartición sencilla de ficheros y recogida de trabajos de los alumnos
 
-.. todo::
-   Diagrama de ejemplo
+.. nwdiag::
+
+   nwdiag {
+    Internet [shape = cloud]
+    Internet -- Router;
+
+    network centro {
+      label = 'Red del Centro'
+      Router;
+      Servidor [label = 'Servidor Aula']
+    }
+
+    network aula {
+      label = 'Red del Aula'
+      Servidor;
+      'Cliente 1';
+      'Cliente 2';
+      'Cliente n';
+    }
+   }
 
 Modelo de Centro LliureX
 ------------------------
@@ -44,8 +62,41 @@ Para ello hay que cumplir con una serie de recomendaciones:
   * Adecuar el *hardware* a la carga (cantidad de clientes y tipo) que vaya a tener cada servidor
   * Disponer las conexiones de mayor ancho de banda para la comunicación (sincronización) entre servidores
 
-.. todo::
-   Diagrama de ejemplo
+.. nwdiag::
+
+   nwdiag {
+    Internet [shape = cloud]
+    Internet -- Router;
+
+    network redcentro {
+      label = 'Troncal del Centro'
+      Router;
+      ServidorC [label = 'Servidor Centro']
+      ServidorA1 [label = 'Servidor Aula 1']
+      ServidorA2 [label = 'Servidor Aula 2']
+    }
+
+    network centro {
+      label = 'Red del Centro'
+      ServidorC;
+      Cliente1AC [label = 'Cliente 1']
+      ClientenAC [label = 'Cliente n']
+    }
+
+    network aula1 {
+      label = 'Red del Aula 1'
+      ServidorA1;
+      Cliente1A1 [label = 'Cliente 1']
+      ClientenA1 [label = 'Cliente n']
+    }
+
+    network aula2 {
+      label = 'Red del Aula 2'
+      ServidorA2;
+      Cliente1A2 [label = 'Cliente 1']
+      ClientenA2 [label = 'Cliente n']
+    }
+   }
 
 Asistente de configuración del servidor LliureX
 -----------------------------------------------
