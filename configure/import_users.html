@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Importación de usuarios &mdash; Guía de Administración de LliureX Servidor v 0.1</title>
+    <title>Importación de usuarios y grupos &mdash; Guía de Administración de LliureX Servidor v 0.1</title>
     
     <link rel="stylesheet" href="../_static/solar.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -47,6 +47,19 @@
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/lliurex.png" alt="Logo"/>
             </a></p>
+  <h3><a href="../index.html">Tabla de Contenidos</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Importación de usuarios y grupos</a><ul>
+<li><a class="reference internal" href="#generacion-del-archivo-de-usuarios-y-grupos">Generación del archivo de usuarios y grupos</a><ul>
+<li><a class="reference internal" href="#a-partir-de-gescen">A partir de GESCEN</a></li>
+<li><a class="reference internal" href="#a-partir-de-itaca">A partir de ITACA</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#importacion-de-usuarios-y-grupos-a-partir-del-archivo">Importación de usuarios y grupos a partir del archivo</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Tema anterior</h4>
   <p class="topless"><a href="setup.html"
                         title="capítulo anterior">Configuración inicial</a></p>
@@ -74,8 +87,34 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="importacion-de-usuarios">
-<h1>Importación de usuarios<a class="headerlink" href="#importacion-de-usuarios" title="Enlazar permanentemente con este título">¶</a></h1>
+  <div class="section" id="importacion-de-usuarios-y-grupos">
+<h1>Importación de usuarios y grupos<a class="headerlink" href="#importacion-de-usuarios-y-grupos" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Para el mejor aprovechamiento de la funcionalidad de un servidor LliureX es importante configurar el conjunto de usuarios y grupos. Un sistema de gestión de usuarios y grupos permite aplicar diferentes niveles de privilegios según el usuario concreto o grupo al que pertenece. En LliureX se ha desarrollado una herramienta denominada <strong>Llum</strong> (<em>LliureX User Manager</em>). Con <em>Llum</em> se pueden dar altas, bajas y modificaciones de usuarios y grupos.</p>
+<p>La opción más lógica para comenzar la configuración de usuarios y grupos en LliureX es realizar una <em>importación de usuarios y grupos</em>. En los centros docentes contamos con la posibilidad de generar un archivo con toda la información necesaria a partir del programa de Gestión de Centros (GESCEN) o de ITACA. El proceso es el siguiente:</p>
+<p># Generación del archivo con los datos de alumnos, grupos y profesores (en formato XML)
+# Importación del archivo generado con el gestor de usuarios <strong>Llum</strong>.</p>
+<p>De esta manera nos ahorraremos una gran cantidad de tiempo en la creación de usuarios y grupos del sistema. Veamos con más detalle cómo realizar este proceso de importación de usuarios.</p>
+<div class="section" id="generacion-del-archivo-de-usuarios-y-grupos">
+<h2>Generación del archivo de usuarios y grupos<a class="headerlink" href="#generacion-del-archivo-de-usuarios-y-grupos" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="a-partir-de-gescen">
+<h3>A partir de GESCEN<a class="headerlink" href="#a-partir-de-gescen" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>El primer paso es iniciar la aplicación GESCEN y hacer clic en el menú <strong>Procesos</strong>, a continuación <strong>Exportar datos a...</strong>, y hacer clic en <strong>Generación archivo XML para aulas LliureX</strong>.</p>
+<img alt="Menús de GESCEN desplegados para obtener la exportación de usuarios" src="../_images/gescen.png" />
+<p>A continuación, se abrirá una ventana de confirmación del proceso; haga clic en <strong>Sí</strong> para generar el archivo. Una vez finalizada la generación del archivo, se abrirá una ventana con un aviso que muestra el resultado de la exportación y la carpeta donde ha generado el fichero <strong>llxgesc.xml</strong>. Guarde el fichero en un dispositivo de almacenamiento con capacidad suficiente (por ejemplo en una memoria USB).</p>
+</div>
+<div class="section" id="a-partir-de-itaca">
+<h3>A partir de ITACA<a class="headerlink" href="#a-partir-de-itaca" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>De la misma manera que con GESCEN, inicie la aplicación de ITACA, vaya a la pestaña de <strong>Centro</strong> (1) y en el menú de la izquierda escoja la entrada <strong>Importación/Exportación</strong> (2). En la parte central deje seleccionada la opción <strong>Aula LliureX</strong> (3) y, finalmente, pulse el botón <strong>Exportar</strong> (4) que le pregunta dónde quiere guardar el fichero <strong>llxgesc.xml</strong>. Escoja la carpeta y pulse el botón &#8220;Aceptar&#8221;.</p>
+<a class="reference internal image-reference" href="../_images/itaca.png"><img alt="Secuencia de pasos para obtener en ITACA la exportación de usuarios" src="../_images/itaca.png" style="width: 600px;" /></a>
+</div>
+</div>
+<div class="section" id="importacion-de-usuarios-y-grupos-a-partir-del-archivo">
+<h2>Importación de usuarios y grupos a partir del archivo<a class="headerlink" href="#importacion-de-usuarios-y-grupos-a-partir-del-archivo" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Para importar la información de usuarios y grupos, acceda a <em>Aplicaciones</em> &gt; <em>Administración de LliureX</em> &gt; <em>Centro de control de LliureX</em> y en la sección <em>Sistema</em> acceda a la herramienta <em>Gestión de usuarios de LDAP</em> (que corresponde a Llum). Para realizar este tipo de operación es necesario utilizar un usuario y contraseña con permisos de administración. Puede utilizar el usuario <strong>netadmin</strong> que acaba de crear en la inicialización del servidor. Una vez dentro escoja el botón <em>Importación Gescen/Itaca</em> del listado de la izquierda (utilice la barra de desplazamiento vertical si es necesario). En la parte central de la ventana le aparecerá la opción desplegable para escoger el archivo de su sistema de archivos.</p>
+<a class="reference internal image-reference" href="../_images/llum.png"><img alt="Acceso a la importación de usuarios en Llum" src="../_images/llum.png" style="width: 600px;" /></a>
+<p>Una vez escogido el archivo <strong>llxgesc.xml</strong> pulse sobre el botón <em>Aplicar</em>. Dependiendo del número de usuarios de su centro, el proceso será más o menos costoso. ¡Tenga paciencia!</p>
+<p>Durante el desarrollo de la importación de usuarios se irán creando secuencialmente cada uno de los usuarios (nombre de usuario, contraseña, directorio de inicio y permisos en el servidor) así como los grupos definidos en GESCEN o ITACA en el momento de realizar la exportación del fichero. Una vez finalizada la importación de usuarios podrá comprobar los grupos generados con la opción de <em>Listado de contraseñas</em> (justo antes de <em>Importación Gescen/Itaca</em>).</p>
+</div>
 </div>
 
 
@@ -98,7 +137,7 @@
     </div>
     <div class="footer">
         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES">Licencia CC BY-NC-SA 3.0</a> 2013, Equipo LliureX.
-      Actualizado por última vez en 2014-01-31.
+      Actualizado por última vez en 2014-02-03.
     Creado con <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2. Tema por <a href="http://github.com/vkvn">vkvn</a>
     </div>
   </body>
