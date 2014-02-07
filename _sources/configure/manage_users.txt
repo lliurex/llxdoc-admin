@@ -29,7 +29,7 @@ Obtención de listados de contraseñas
 
 Para proporcionar las contraseñas (y cuentas de usuarios) creadas en el proceso de importación, se facilita la obtención de listados de contraseñas tanto de alumnos (pudiendo seleccionar un grupo concreto) como de profesores.
 
-.. image:: ../_static/Llum-listados.gif
+.. image:: ../_static/Llum-listing.gif
    :alt: Secuencia de pasos para obtener el listado de contraseñas de un grupo de alumnos
 
 .. note::
