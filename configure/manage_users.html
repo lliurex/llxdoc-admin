@@ -47,6 +47,15 @@
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/lliurex.png" alt="Logo"/>
             </a></p>
+  <h3><a href="../index.html">Tabla de Contenidos</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Gestión de usuarios y grupos</a><ul>
+<li><a class="reference internal" href="#cambio-de-contrasena">Cambio de contraseña</a></li>
+<li><a class="reference internal" href="#obtencion-de-listados-de-contrasenas">Obtención de listados de contraseñas</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Tema anterior</h4>
   <p class="topless"><a href="import_users.html"
                         title="capítulo anterior">Importación de usuarios y grupos</a></p>
@@ -80,11 +89,30 @@
 <p>Llum le permite crear, modificar y borrar usuarios y grupos. Algunos ejemplos de las tareas que puede necesitar realizar con Llum son:</p>
 <ul class="simple">
 <li>Cambiar contraseñas</li>
-<li>Sacar listados de contraseñas (de alumnos)</li>
+<li>Obtención de listados de contraseñas</li>
 <li>Crear grupos mixtos de alumnos (p.e. para asignaturas optativas)</li>
 <li>Congelar las preferencias del escritorio de usuarios</li>
 <li>Realizar un borrado masivo de directorios de usuarios</li>
 </ul>
+<div class="section" id="cambio-de-contrasena">
+<h2>Cambio de contraseña<a class="headerlink" href="#cambio-de-contrasena" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Nada más entrar en Llum nos ofrece la posibilidad de cambiar nuestra contraseña. Como en cualquier sistema, nos pide primero la clave actual y que introduzcamos dos veces la nueva contraseña que deseemos.</p>
+<p>Si lo que queremos, como administradores, es cambiar la contraseña a un usuario, deberemos buscar primero al usuario concreto y, una vez tengamos la ficha del usuario, procederemos a cambiar la contraseña del mismo.</p>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Si quiere obtener la contraseña actual del usuario actualmente tiene la posibilidad de solicitar un listado de contraseñas.</p>
+</div>
+<img alt="Secuencia de pasos para buscar y cambiar la contraseña de un usuario" src="../_images/Llum-password.gif" />
+</div>
+<div class="section" id="obtencion-de-listados-de-contrasenas">
+<h2>Obtención de listados de contraseñas<a class="headerlink" href="#obtencion-de-listados-de-contrasenas" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Para proporcionar las contraseñas (y cuentas de usuarios) creadas en el proceso de importación, se facilita la obtención de listados de contraseñas tanto de alumnos (pudiendo seleccionar un grupo concreto) como de profesores.</p>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Por motivos de seguridad, en el caso de usuarios con perfil de profesor, no se mostrará más que la contraseña inicial. Si hay cambios posteriores de la misma, no se mostrarán.</p>
+</div>
+<img alt="Secuencia de pasos para obtener el listado de contraseñas de un grupo de alumnos" src="configure/../_static/Llum-listados.gif" />
+</div>
 </div>
 
 
@@ -107,7 +135,7 @@
     </div>
     <div class="footer">
         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES">Licencia CC BY-NC-SA 3.0</a> 2013, Equipo LliureX.
-      Actualizado por última vez en 2014-02-04.
+      Actualizado por última vez en 2014-02-07.
     Creado con <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2. Tema por <a href="http://github.com/vkvn">vkvn</a>
     </div>
   </body>
