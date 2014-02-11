@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Compartición de directorios en LliureX &mdash; Guía de Administración de LliureX Servidor v 0.1</title>
+    
+    <link rel="stylesheet" href="../_static/solar.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="Guía de Administración de LliureX Servidor v 0.1" href="../index.html" />
+    <link rel="next" title="Introducción a LliureX LTSP" href="../manage/intro.html" />
+    <link rel="prev" title="Gestión de usuarios y grupos" href="manage_users.html" /><link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Open+Sans:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+<link href="../_static/solarized-dark.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../manage/intro.html" title="Introducción a LliureX LTSP"
+             accesskey="N">siguiente</a></li>
+        <li class="right" >
+          <a href="manage_users.html" title="Gestión de usuarios y grupos"
+             accesskey="P">anterior</a> |</li>
+        <li><a href="../index.html">Guía de Administración de LliureX Servidor</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/lliurex.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../index.html">Tabla de Contenidos</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Compartición de directorios en LliureX</a><ul>
+<li><a class="reference internal" href="#compartir-ficheros-con-todo-el-aula">Compartir ficheros con todo el aula</a></li>
+<li><a class="reference internal" href="#compartir-ficheros-con-un-grupo">Compartir ficheros con un grupo</a></li>
+<li><a class="reference internal" href="#compartir-ficheros-entre-profesores">Compartir ficheros entre profesores</a></li>
+<li><a class="reference internal" href="#acceso-a-las-carpetas-de-los-alumnos">Acceso a las carpetas de los alumnos</a></li>
+<li><a class="reference internal" href="#entrega-puntual-de-trabajos-mediante-el-recolector-de-trabajos">Entrega puntual de trabajos mediante el <em>Recolector de trabajos</em></a></li>
+<li><a class="reference internal" href="#tabla-resumen">Tabla resumen</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Tema anterior</h4>
+  <p class="topless"><a href="manage_users.html"
+                        title="capítulo anterior">Gestión de usuarios y grupos</a></p>
+  <h4>Próximo tema</h4>
+  <p class="topless"><a href="../manage/intro.html"
+                        title="próximo capítulo">Introducción a LliureX LTSP</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Búsqueda rápida</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Ir a" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Introduzca los términos de búsqueda o un nombre de módulo, clase o función.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="comparticion-de-directorios-en-lliurex">
+<h1>Compartición de directorios en LliureX<a class="headerlink" href="#comparticion-de-directorios-en-lliurex" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>A partir de la versión 13.06 de LliureX (Pandora) se establecen una serie de directorios compartidos en el servidor para distintas finalidades:</p>
+<div class="section" id="compartir-ficheros-con-todo-el-aula">
+<h2>Compartir ficheros con todo el aula<a class="headerlink" href="#compartir-ficheros-con-todo-el-aula" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Todos los usuarios tienen en su carpeta de Inicio (<em>home</em>) un directorio llamado <em>Compartido</em> (que corresponde a <em>/net/server-sync/share</em> en el servidor). Únicamente los profesores y el usuario <em>netadmin</em> tienen acceso de escritura. Los alumnos solo pueden leer.
+Así pues, cuando queramos compartir ficheros o directorios para un aula (o para todo el centro si hemos implantado el <em>Modelo de Centro</em>), será la opción más conveniente.</p>
+</div>
+<div class="section" id="compartir-ficheros-con-un-grupo">
+<h2>Compartir ficheros con un grupo<a class="headerlink" href="#compartir-ficheros-con-un-grupo" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Todos los usuarios de un grupo, a traves del directorio <em>Compartit_de_grups</em> de la carpeta de Inicio (que corresponde a <em>/net/server-sync/groups_share</em> en el servidor). Dentro de esta carpeta se encuentra organizado por los grupos que se hayan creado desde Llum. Los alumnos sólo podrán entrar en el grupo al que pertenezcan (con permisos de lectura). Los profesores y netadmin tienen acceso de escritura.</p>
+</div>
+<div class="section" id="compartir-ficheros-entre-profesores">
+<h2>Compartir ficheros entre profesores<a class="headerlink" href="#compartir-ficheros-entre-profesores" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Sólo los profesores tienen acceso (en su carpeta de Inicio) al directorio &#8220;Professorat&#8221; (localizado en <em>/net/server-sync/teachers_share/</em> en el servidor).</p>
+</div>
+<div class="section" id="acceso-a-las-carpetas-de-los-alumnos">
+<h2>Acceso a las carpetas de los alumnos<a class="headerlink" href="#acceso-a-las-carpetas-de-los-alumnos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Los profesores también tienen en su carpeta de Inicio un directorio llamado &#8220;alum&#8221;. Este directorio contiene la relación de carpetas correspondiente a cada uno de los alumnos. Desde cada una de estas carpetas se puede acceder al directorio Escritorio y Documentos.</p>
+</div>
+<div class="section" id="entrega-puntual-de-trabajos-mediante-el-recolector-de-trabajos">
+<h2>Entrega puntual de trabajos mediante el <em>Recolector de trabajos</em><a class="headerlink" href="#entrega-puntual-de-trabajos-mediante-el-recolector-de-trabajos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Esta opción está pensada para que los alumnos puedan entregar ficheros al profesor.</p>
+</div>
+<div class="section" id="tabla-resumen">
+<h2>Tabla resumen<a class="headerlink" href="#tabla-resumen" title="Enlazar permanentemente con este título">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="26%" />
+<col width="22%" />
+<col width="51%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Directorio (dentro de Inicio)</th>
+<th class="head">Finalidad</th>
+<th class="head">Perfiles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Compartido</td>
+<td>Compartir con el aula</td>
+<td>Escritura: netadmin, profesores / Lectura: alumnos</td>
+</tr>
+<tr class="row-odd"><td>Compartit_de_grups</td>
+<td>Compartir con un grupo</td>
+<td>Escritura: netadmin, profesores / Lectura: alumnos del grupo</td>
+</tr>
+<tr class="row-even"><td>Professorat</td>
+<td>Compartir entre profesores</td>
+<td>Escritura: netadmin, profesores</td>
+</tr>
+<tr class="row-odd"><td>alum</td>
+<td>Acceder carpetas alumnos</td>
+<td>Escritura: netadmin, profesores</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../manage/intro.html" title="Introducción a LliureX LTSP"
+             >siguiente</a></li>
+        <li class="right" >
+          <a href="manage_users.html" title="Gestión de usuarios y grupos"
+             >anterior</a> |</li>
+        <li><a href="../index.html">Guía de Administración de LliureX Servidor</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES">Licencia CC BY-NC-SA 3.0</a> 2013, Equipo LliureX.
+      Actualizado por última vez en 2014-02-11.
+    Creado con <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2. Tema por <a href="http://github.com/vkvn">vkvn</a>
+    </div>
+  </body>
+</html>
