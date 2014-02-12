@@ -110,5 +110,5 @@ El servidor Lliurex 13.06 incluye un asistente llamado *Zero Server Wizard* que 
 En la nueva versión de LliureX se ha añadido el usuario **netadmin** para la administración global. Este usuario se genera al inicializar el servidor con el asistente (*zero-server-wizard*) y lo podremos utilizar para entrar en cualquier equipo de la red (ya que se da de alta en LDAP y tiene permisos de administración).
 
 .. note::
-  Hay que diferenciar el usuario **netadmin** del usuario que creamos al instalar el servidor (que será administrado local y no podrá entrar en el resto de equipos de la red).
+  Hay que diferenciar el usuario **netadmin** del usuario que creamos al instalar el servidor (que será administrador local y no podrá entrar en el resto de equipos de la red).
 
