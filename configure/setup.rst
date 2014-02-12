@@ -30,15 +30,15 @@ Este modelo está pensado para soportar la configuración de aulas independiente
     network centro {
       label = 'Red del Centro'
       Router;
-      Servidor [label = 'Servidor Aula']
+      Servidor [address = 172.21.240.254, label = 'Servidor Aula']
     }
 
     network aula {
       label = 'Red del Aula'
-      Servidor;
-      'Cliente 1';
-      'Cliente 2';
-      'Cliente n';
+      Servidor [address = 10.2.1.254];
+      'Cliente 1' [address = 10.2.1.1];
+      'Cliente 2' [address = 10.2.1.2];
+      'Cliente 15' [address = 10.2.1.15];
     }
    }
 
@@ -72,30 +72,30 @@ Para ello hay que cumplir con una serie de recomendaciones:
     network redcentro {
       label = 'Troncal del Centro'
       Router;
-      ServidorC [label = 'Servidor Centro']
-      ServidorA1 [label = 'Servidor Aula 1']
-      ServidorA2 [label = 'Servidor Aula 2']
+      ServidorC [address = 172.21.240.254, label = 'Servidor Centro']
+      ServidorA1 [address = 172.21.240.253, label = 'Servidor Aula 1']
+      ServidorA2 [address = 172.21.240.252, label = 'Servidor Aula 2']
     }
 
     network centro {
       label = 'Red del Centro'
-      ServidorC;
-      Cliente1AC [label = 'Cliente 1']
-      ClientenAC [label = 'Cliente n']
+      ServidorC [address = 10.2.0.254];
+      Cliente1AC [address = 10.2.0.1, label = 'Cliente 1']
+      ClientenAC [address = 10.2.0.35, label = 'Cliente 35']
     }
 
     network aula1 {
       label = 'Red del Aula 1'
-      ServidorA1;
-      Cliente1A1 [label = 'Cliente 1']
-      ClientenA1 [label = 'Cliente n']
+      ServidorA1 [address = 10.2.1.254];
+      Cliente1A1 [address = 10.2.1.1, label = 'Cliente 1']
+      ClientenA1 [address = 10.2.1.15, label = 'Cliente 15']
     }
 
     network aula2 {
       label = 'Red del Aula 2'
-      ServidorA2;
-      Cliente1A2 [label = 'Cliente 1']
-      ClientenA2 [label = 'Cliente n']
+      ServidorA2 [address = 10.2.2.254];
+      Cliente1A2 [address = 10.2.2.1, label = 'Cliente 1']
+      ClientenA2 [address = 10.2.2.20, label = 'Cliente 20']
     }
    }
 
