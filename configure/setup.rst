@@ -58,6 +58,7 @@ Para ello hay que cumplir con una serie de recomendaciones:
 
 * Infraestructura de la red del centro en óptimas condiciones (recomendable categoría 6)
 * Planificar la distribución de servidores por el centro
+
   * Decidir cual actuará como maestro (aunque no haya una red jerárquica sino de tipo *bus*)
   * Adecuar el *hardware* a la carga (cantidad de clientes y tipo) que vaya a tener cada servidor
   * Disponer las conexiones de mayor ancho de banda para la comunicación (sincronización) entre servidores
