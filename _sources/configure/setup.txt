@@ -30,17 +30,22 @@ Este modelo está pensado para soportar la configuración de aulas independiente
     network centro {
       label = 'Red del Centro'
       Router;
-      Servidor [label = 'Servidor Aula']
+      Servidor [address = 172.21.240.254, label = 'Servidor Aula']
     }
 
     network aula {
       label = 'Red del Aula'
-      Servidor;
-      'Cliente 1';
-      'Cliente 2';
-      'Cliente n';
+      Servidor [address = 10.2.1.254];
+      'Cliente 1' [address = 10.2.1.1];
+      'Cliente 2' [address = 10.2.1.2];
+      'Cliente 15' [address = 10.2.1.15];
     }
    }
+
+En el ejemplo de la figura se plantea un esquema de un aula de informática con 15 ordenadores cliente. Se puede observar que las direcciones IP de dentro del aula corresponden todas al rango 10.2.1.X (reservándose -como convenio- la 254 para el servidor). En la tarjeta externa del servidor aparece una IP interna a la Red Corporativa de Aulas de la Conselleria. Se puede obtener dinámicamente (mediante DHCP) o bien asignar manualmente. En este caso, que sólo existe un servidor en el centro, se recomienda usar la acabada en 254.
+
+.. nota::
+   Para los ejemplos de direcciones IP de la Red Corporativa de Aulas se está empleando el rango 172.21.240/24 (sin asignar) para un centro docente hipotético.
 
 Modelo de Centro LliureX
 ------------------------
@@ -58,6 +63,7 @@ Para ello hay que cumplir con una serie de recomendaciones:
 
 * Infraestructura de la red del centro en óptimas condiciones (recomendable categoría 6)
 * Planificar la distribución de servidores por el centro
+
   * Decidir cual actuará como maestro (aunque no haya una red jerárquica sino de tipo *bus*)
   * Adecuar el *hardware* a la carga (cantidad de clientes y tipo) que vaya a tener cada servidor
   * Disponer las conexiones de mayor ancho de banda para la comunicación (sincronización) entre servidores
@@ -71,32 +77,42 @@ Para ello hay que cumplir con una serie de recomendaciones:
     network redcentro {
       label = 'Troncal del Centro'
       Router;
-      ServidorC [label = 'Servidor Centro']
-      ServidorA1 [label = 'Servidor Aula 1']
-      ServidorA2 [label = 'Servidor Aula 2']
+      ServidorC [address = 172.21.240.254, label = 'Servidor Centro']
+      ServidorA1 [address = 172.21.240.253, label = 'Servidor Aula 1']
+      ServidorA2 [address = 172.21.240.252, label = 'Servidor Aula 2']
     }
 
     network centro {
       label = 'Red del Centro'
-      ServidorC;
-      Cliente1AC [label = 'Cliente 1']
-      ClientenAC [label = 'Cliente n']
+      ServidorC [address = 10.2.0.254];
+      Cliente1AC [address = 10.2.0.1, label = 'Cliente 1']
+      ClientenAC [address = 10.2.0.35, label = 'Cliente 35']
     }
 
     network aula1 {
       label = 'Red del Aula 1'
-      ServidorA1;
-      Cliente1A1 [label = 'Cliente 1']
-      ClientenA1 [label = 'Cliente n']
+      ServidorA1 [address = 10.2.1.254];
+      Cliente1A1 [address = 10.2.1.1, label = 'Cliente 1']
+      ClientenA1 [address = 10.2.1.15, label = 'Cliente 15']
     }
 
     network aula2 {
       label = 'Red del Aula 2'
-      ServidorA2;
-      Cliente1A2 [label = 'Cliente 1']
-      ClientenA2 [label = 'Cliente n']
+      ServidorA2 [address = 10.2.2.254];
+      Cliente1A2 [address = 10.2.2.1, label = 'Cliente 1']
+      ClientenA2 [address = 10.2.2.20, label = 'Cliente 20']
     }
    }
+
+Siguiendo el esquema, podemos observar una serie de patrones en las direcciones IP que corresponden a las recomendaciones de arquitectura de red de LliureX:
+
+* Las direcciones IP de la red troncal del centro se corresponden al rango asignado al centro. Se comienza numerando al Servidor de Centro con la IP terminada en 254 y se continua -hacia atrás- con las aulas.
+* En cada red interna (proporcionada por cada servidor) se repite el patrón siguiente:
+
+  * 10.2.X.254 para el servidor (siendo X = 0 para el caso del servidor de centro, 1 para el Aula 1 y así sucesivamente).
+  * las direcciones IP de los clientes comienzan desde el principio del rango en el que están inscritas (en este ejemplo el servidor de centro tendría 35, el "Aula 1" 15 y el "Aula 2" 20 equipos cliente respectivamente.
+
+.. hint:: Como curiosidad técnica, en el funcionamiento interno del modelo de centro se crea una red alias en la red troncal. De esta manera se simplifica el direccionamiento entre los servidores del centro: 10.3.0.254 (centro), 10.3.0.1 (aula 1), 10.3.0.2 (aula 2), etc.
 
 Asistente de configuración del servidor LliureX
 -----------------------------------------------
@@ -109,5 +125,5 @@ El servidor Lliurex 13.06 incluye un asistente llamado *Zero Server Wizard* que 
 En la nueva versión de LliureX se ha añadido el usuario **netadmin** para la administración global. Este usuario se genera al inicializar el servidor con el asistente (*zero-server-wizard*) y lo podremos utilizar para entrar en cualquier equipo de la red (ya que se da de alta en LDAP y tiene permisos de administración).
 
 .. note::
-  Hay que diferenciar el usuario **netadmin** del usuario que creamos al instalar el servidor (que será administrado local y no podrá entrar en el resto de equipos de la red).
+  Hay que diferenciar el usuario **netadmin** del usuario que creamos al instalar el servidor (que será administrador local y no podrá entrar en el resto de equipos de la red).
 
