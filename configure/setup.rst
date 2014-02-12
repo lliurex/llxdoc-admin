@@ -42,6 +42,11 @@ Este modelo está pensado para soportar la configuración de aulas independiente
     }
    }
 
+En el ejemplo de la figura se plantea un esquema de un aula de informática con 15 ordenadores cliente. Se puede observar que las direcciones IP de dentro del aula corresponden todas al rango 10.2.1.X (reservándose -como convenio- la 254 para el servidor). En la tarjeta externa del servidor aparece una IP interna a la Red Corporativa de Aulas de la Conselleria. Se puede obtener dinámicamente (mediante DHCP) o bien asignar manualmente. En este caso, que sólo existe un servidor en el centro, se recomienda usar la acabada en 254.
+
+.. nota::
+   Para los ejemplos de direcciones IP de la Red Corporativa de Aulas se está empleando el rango 172.21.240/24 (sin asignar) para un centro docente hipotético.
+
 Modelo de Centro LliureX
 ------------------------
 
@@ -98,6 +103,16 @@ Para ello hay que cumplir con una serie de recomendaciones:
       ClientenA2 [address = 10.2.2.20, label = 'Cliente 20']
     }
    }
+
+Siguiendo el esquema, podemos observar una serie de patrones en las direcciones IP que corresponden a las recomendaciones de arquitectura de red de LliureX:
+
+* Las direcciones IP de la red troncal del centro se corresponden al rango asignado al centro. Se comienza numerando al Servidor de Centro con la IP terminada en 254 y se continua -hacia atrás- con las aulas.
+* En cada red interna (proporcionada por cada servidor) se repite el patrón siguiente:
+
+  * 10.2.X.254 para el servidor (siendo X = 0 para el caso del servidor de centro, 1 para el Aula 1 y así sucesivamente).
+  * las direcciones IP de los clientes comienzan desde el principio del rango en el que están inscritas (en este ejemplo el servidor de centro tendría 35, el "Aula 1" 15 y el "Aula 2" 20 equipos cliente respectivamente.
+
+.. hint:: Como curiosidad técnica, en el funcionamiento interno del modelo de centro se crea una red alias en la red troncal. De esta manera se simplifica el direccionamiento entre los servidores del centro: 10.3.0.254 (centro), 10.3.0.1 (aula 1), 10.3.0.2 (aula 2), etc.
 
 Asistente de configuración del servidor LliureX
 -----------------------------------------------
